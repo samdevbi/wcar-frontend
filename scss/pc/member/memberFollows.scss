@@ -1,0 +1,435 @@
+#pc-wrap {
+	#member-follows-page {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.main-title-box {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			justify-content: space-between;
+
+			.right-box {
+				width: 315px;
+
+				.main-title {
+					color: #fff;
+					font-family: $font;
+					font-size: 30px;
+					font-style: normal;
+					font-weight: 600;
+					line-height: normal;
+					letter-spacing: 0.6px;
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		.follows-list-box {
+			width: 100%;
+			margin-top: 80px;
+			gap: 15px;
+
+			.listing-title-box {
+				width: 100%;
+				height: auto;
+				flex-direction: row;
+				gap: 110px;
+				padding: 18px 34px 18px 33px;
+				border-radius: 12px;
+				background: #336659;
+				justify-content: space-between;
+
+				.title-text {
+					margin-bottom: 40px;
+					color: #fff;
+					font-family: $font;
+					font-size: 15px;
+					font-style: normal;
+					font-weight: 600;
+					line-height: normal;
+				}
+			}
+
+			.follows-card-box {
+				padding-right: 30px;
+				padding-bottom: 5px;
+				width: 100%;
+				height: auto;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 10px;
+				border-bottom: 1px solid #ddd;
+
+				.info {
+					width: 420px;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					cursor: pointer;
+
+					.image-box {
+						width: 100px;
+						height: 100px;
+						border-radius: 1rem;
+						overflow: hidden;
+						margin-right: 25px;
+
+						img {
+							width: 100%;
+							height: 100%;
+							border-radius: 1rem;
+							object-fit: cover;
+						}
+					}
+
+					.information-box {
+						width: auto;
+						height: auto;
+						padding: 5px 0px;
+
+						.name {
+							width: 300px;
+							color: #fff;
+							font-family: $font;
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: normal;
+							text-transform: capitalize;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+					}
+				}
+
+				.details-box {
+					width: 300px;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+
+					.info-box {
+						display: flex;
+						align-items: center;
+
+						img {
+							width: 24px;
+							height: 24px;
+						}
+
+						svg {
+							width: 24px;
+							height: 24px;
+							cursor: pointer;
+						}
+
+						p {
+							color: #fff;
+							font-family: $font;
+							font-size: 15px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: normal;
+						}
+
+						span {
+							margin-left: 4px;
+							color: #fff;
+							font-family: $font;
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: normal;
+						}
+					}
+				}
+
+				.action-box {
+					width: 300px;
+					height: 100%;
+					flex-direction: row;
+					align-items: center;
+					justify-content: flex-end;
+					gap: 20px;
+
+					button {
+						border: 1px solid #b9b9b9;
+						color: #fff;
+						font-family: $font;
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+					}
+
+					p {
+						color: #b9b9b9;
+						font-family: $font;
+						font-size: 14px;
+						font-style: italic;
+						font-weight: 400;
+						line-height: normal;
+					}
+				}
+			}
+		}
+
+		.pagination-config {
+			width: 100%;
+			height: auto;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+
+			.total-result {
+				p {
+					color: #fff;
+					text-align: center;
+					font-family: $font;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 26px;
+				}
+			}
+		}
+	}
+
+	#member-notification-page {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.main-title-box {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			justify-content: space-between;
+
+			.right-box {
+				width: 315px;
+
+				.main-title {
+					color: #fff;
+					font-family: $font;
+					font-size: 30px;
+					font-style: normal;
+					font-weight: 600;
+					line-height: normal;
+					letter-spacing: 0.6px;
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		.follows-list-box {
+			width: 100%;
+			margin-top: 80px;
+			gap: 15px;
+
+			.listing-title-box {
+				width: 100%;
+				height: 60px;
+				flex-direction: row;
+				gap: 110px;
+				padding: 18px 34px 18px 33px;
+				border-radius: 12px;
+				background: #336659;
+				justify-content: space-between;
+
+				.title-text {
+					margin-bottom: 40px;
+					color: #fff;
+					font-family: $font;
+					font-size: 15px;
+					font-style: normal;
+					font-weight: 600;
+					line-height: normal;
+				}
+
+				.btn {
+					width: 100px;
+					height: 25px;
+					border-radius: 1rem;
+					border: 1px solid #000;
+					background: #000;
+					text-align: center;
+					cursor: pointer;
+					transition: background-color 0.3s ease;
+
+					&:hover {
+						background-color: darkblue;
+					}
+
+				}
+			}
+
+			.follows-card-box {
+				padding-right: 30px;
+				padding-bottom: 5px;
+				width: 100%;
+				height: 60px;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				gap: 10px;
+				border-bottom: 1px solid #ddd;
+
+				.info {
+					width: 50%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					cursor: pointer;
+
+					.image-box {
+						width: 40px;
+						height: 40px;
+						border-radius: 1rem;
+						overflow: hidden;
+						margin-right: 25px;
+
+						img {
+							width: 100%;
+							height: 100%;
+							border-radius: 1rem;
+							object-fit: cover;
+						}
+					}
+
+					.information-box {
+						width: 300px;
+						height: auto;
+						padding: 5px 0px;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+
+						.name {
+							width: 150px;
+							color: #fff;
+							font-family: $font;
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: normal;
+							text-transform: capitalize;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+					}
+				}
+
+				.details-box {
+					width: 80%;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+
+					.info-box {
+						display: flex;
+						align-items: center;
+						margin-left: 20px;
+
+						img {
+							width: 24px;
+							height: 24px;
+						}
+
+						svg {
+							width: 24px;
+							height: 24px;
+							cursor: pointer;
+						}
+
+						p {
+							width: auto;
+							color: #fff;
+							font-family: $font;
+							font-size: 12px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: normal;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+
+						span {
+							max-width: 200px;
+							margin-left: 4px;
+							color: #fff;
+							font-family: $font;
+							font-size: 13px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: normal;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+
+							.title-text {
+								margin-bottom: 40px;
+								color: #fff;
+								font-family: $font;
+								font-size: 15px;
+								font-style: normal;
+								font-weight: 600;
+								line-height: normal;
+							}
+
+							.btn {
+								margin-top: 30px;
+								width: 60px;
+								height: 25px;
+								border-radius: 1rem;
+								border: 1px solid #000;
+								background: #000;
+								text-align: center;
+								cursor: pointer;
+								transition: background-color 0.3s ease;
+
+								&:hover {
+									background-color: darkblue;
+								}
+
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.pagination-config {
+			width: 100%;
+			height: auto;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+
+			.total-result {
+				p {
+					color: #fff;
+					text-align: center;
+					font-family: $font;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 26px;
+				}
+			}
+		}
+	}
+}
