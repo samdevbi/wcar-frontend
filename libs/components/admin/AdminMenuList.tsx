@@ -86,27 +86,27 @@ const AdminMenuList = (props: any) => {
 	const menu_set = [
 		{
 			title: 'Users',
-			icon: <PersonIcon size={20} color="#bdbdbd" weight="fill" />,
+			icon: <PersonIcon size={20} style={{ color: "#bdbdbd" }} weight="fill" />,
 			on_click: () => subMenuChangeHandler('Users'),
 		},
 		{
 			title: 'Cars',
-			icon: <DriveEtaIcon size={20} color="#bdbdbd" weight="fill" />,
+			icon: <DriveEtaIcon size={20} style={{ color: "#bdbdbd" }} weight="fill" />,
 			on_click: () => subMenuChangeHandler('Cars'),
 		},
 		{
 			title: 'Products',
-			icon: <ShoppingBagIcon size={20} color="#bdbdbd" weight="fill" />,
+			icon: <ShoppingBagIcon size={20} style={{ color: "#bdbdbd" }} weight="fill" />,
 			on_click: () => subMenuChangeHandler('Products'),
 		},
 		{
 			title: 'Community',
-			icon: <ChatsCircle size={20} color="#bdbdbd" weight="fill" />,
+			icon: <ChatsCircle size={20} style={{ color: "#bdbdbd" }} weight="fill" />,
 			on_click: () => subMenuChangeHandler('Community'),
 		},
 		{
 			title: 'Cs',
-			icon: <Headset size={20} color="#bdbdbd" weight="fill" />,
+			icon: <Headset size={20} style={{ color: "#bdbdbd" }} weight="fill" />,
 			on_click: () => subMenuChangeHandler('Cs'),
 		},
 	];
