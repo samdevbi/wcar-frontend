@@ -1,13 +1,13 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { Box, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 import useDeviceDetect from '../../libs/hooks/useDeviceDetect';
 import withLayoutBasic from '../../libs/components/layout/LayoutBasic';
-import Notice from '../../libs/components/cs/Notice';
-import Faq from '../../libs/components/cs/Faq';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Notice from '../../libs/components/cs/Notice';
+import Faq from '../../libs/components/cs/Faq';
 
 export const getStaticProps = async ({ locale }: any) => ({
 	props: {
@@ -39,12 +39,12 @@ const CS: NextPage = () => {
 		return (
 			<Stack className={'cs-page'}>
 				<Stack className={'container'}>
-					<Box component={'div'} className={'cs-main-info'}>
-						<Box component={'div'} className={'info'}>
+					<Stack component={'div'} className={'cs-main-info'}>
+						<Stack component={'div'} className={'info'}>
 							<span>{t('Cs center')}</span>
 							<p>{t('I will answer your questions')}</p>
-						</Box>
-						<Box component={'div'} className={'btns'}>
+						</Stack>
+						<Stack component={'div'} className={'btns'}>
 							<div
 								className={tab == 'notice' ? 'active' : ''}
 								onClick={() => {
@@ -61,14 +61,14 @@ const CS: NextPage = () => {
 							>
 								{t('FAQ')}
 							</div>
-						</Box>
-					</Box>
+						</Stack>
+					</Stack>
 
-					<Box component={'div'} className={'cs-content'}>
+					<Stack component={'div'} className={'cs-content'}>
 						{tab === 'notice' && <Notice />}
 
 						{tab === 'faq' && <Faq />}
-					</Box>
+					</Stack>
 				</Stack>
 			</Stack>
 		);

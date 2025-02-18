@@ -143,9 +143,9 @@ const FaqArticles: NextPage = (initialInput, ...props: any) => {
 
 	return (
 		// @ts-ignore
-		<Box component={'div'} className={'content'}>
-			<Box component={'div'} className={'add-notice'}>
-				<Box component={'div'} className={'title flex_space'}>
+		<Stack component={'div'} className={'content'}>
+			<Stack component={'div'} className={'add-notice'}>
+				<Stack component={'div'} className={'title flex_space'}>
 					<Typography variant={'h2'}>FAQ</Typography>
 					<Button
 						className="btn_add"
@@ -156,8 +156,8 @@ const FaqArticles: NextPage = (initialInput, ...props: any) => {
 						<AddRoundedIcon sx={{ mr: '8px' }} />
 						ADD
 					</Button>
-				</Box>
-				<Box className={'title-box'}>
+				</Stack>
+				<Stack className={'title-box'}>
 					<Typography className="title">Select Group</Typography>
 					<select
 						className={'select-description'}
@@ -197,12 +197,12 @@ const FaqArticles: NextPage = (initialInput, ...props: any) => {
 							setInsertNotice({ ...insertNotice, noticeContent: value })
 						}
 					/>
-				</Box>
-			</Box>
-			<Box component={'div'} className={'table-wrap'}>
-				<Box component={'div'} sx={{ width: '100%', typography: 'body1' }}>
+				</Stack>
+			</Stack>
+			<Stack component={'div'} className={'table-wrap'}>
+				<Stack component={'div'} sx={{ width: '100%', typography: 'body1' }}>
 					<TabContext value={'value'}>
-						<Box component={'div'}>
+						<Stack component={'div'}>
 							<List className={'tab-menu'}>
 								<ListItem
 									// onClick={(e) => handleTabChange(e, 'all')}
@@ -260,7 +260,7 @@ const FaqArticles: NextPage = (initialInput, ...props: any) => {
 								/>
 							</Stack>
 							<Divider />
-						</Box>
+						</Stack>
 						<FaqArticlesPanelList
 							notices={notices}
 							updateNoticeHandler={updateNoticeHandler}
@@ -284,9 +284,9 @@ const FaqArticles: NextPage = (initialInput, ...props: any) => {
 							onRowsPerPageChange={() => { }}
 						/>
 					</TabContext>
-				</Box>
-			</Box>
-		</Box>
+				</Stack>
+			</Stack>
+		</Stack>
 	);
 };
 

@@ -104,7 +104,7 @@ const FindingCars = (props: FindingCars) => {
 		return (
 			<>
 				<Stack className={'search-body'}>
-					<Box className={'title'}>{t('Find Car For Every LifeStyle')}</Box>
+					<div className={'title'}>{t('Find Car For Every LifeStyle')}</div>
 					<Link
 						href={'/cars'}
 						className={'view-all'}>

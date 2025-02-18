@@ -87,7 +87,7 @@ const Faq = () => {
 		return <div>FAQ MOBILE</div>;
 	} else {
 		return (
-			<Stack className={'faq-content'}>
+			<div className={'faq-content'}>
 				<Box className={'categories'} component={'div'}>
 					<div
 						className={category === 'CAR' ? 'active' : ''}
@@ -192,7 +192,7 @@ const Faq = () => {
 							</Accordion>
 						))}
 				</Box>
-			</Stack>
+			</div>
 		);
 	}
 };

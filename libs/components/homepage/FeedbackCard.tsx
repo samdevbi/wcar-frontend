@@ -28,6 +28,8 @@ const FeedbackCard = (props: TopArticleCardProps) => {
     const device = useDeviceDetect();
     const router = useRouter();
     const user = useReactiveVar(userVar);
+    const cleanContent = article.articleContent.replace(/<\/?p>/g, '');
+
 
     /** HANDLERS **/
     const pushDetailhandler = async (articleId: string) => {
@@ -43,16 +45,16 @@ const FeedbackCard = (props: TopArticleCardProps) => {
             >
                 <Box component={'div'} className={'top'}>
                     <Typography className={'title'}>{article.articleTitle}</Typography>
-                    <Box className={'img'}>
+                    <div className={'img'}>
                         <img src="" alt="" />
-                    </Box>
+                    </div>
                 </Box>
-                <Box className={'middel'}>
+                <div className={'middle'}>
                     <p className={'desc'}>
-                        {article.articleContent.replace(/<\/?p>/g, '')}
+                        {cleanContent}
                     </p>
-                </Box>
-                <Box className={'member'}>
+                </div>
+                <div className={'member'}>
                     <div className={'member-img'}>
                         <img src={
                             article?.creatorData?.image
@@ -60,10 +62,10 @@ const FeedbackCard = (props: TopArticleCardProps) => {
                                 : `/img/profile/defaultUser.svg`
                         } alt="" />
                     </div>
-                    <Box className={'info'}>
+                    <div className={'info'}>
                         <span className={'name'}>{article?.creatorData?.titleNick}</span>
                         <p className={'member-address'}>{article?.creatorData?.address}</p>
-                    </Box>
+                    </div>
                     <ChatBubbleOutlineIcon style={{ color: '#ffce69', marginTop: '5px', marginRight: '3px' }} />
                     <div style={{ marginRight: '10px' }}>
                         {article?.articleComments}
@@ -97,7 +99,7 @@ const FeedbackCard = (props: TopArticleCardProps) => {
                             style={{ color: '#f19b5f' }}
                         />
                     )}
-                </Box>
+                </div>
             </Stack>
         );
     }

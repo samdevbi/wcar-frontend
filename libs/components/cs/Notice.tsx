@@ -57,7 +57,7 @@ const Notice = () => {
 		return <div>NOTICE MOBILE</div>;
 	} else {
 		return (
-			<Stack className={'notice-content'}>
+			<div className={'notice-content'}>
 				<span className={'title'}>{t('Notice')}</span>
 				<Stack className={'main'}>
 					<Box component={'div'} className={'top'}>
@@ -102,7 +102,7 @@ const Notice = () => {
 						))}
 					</Stack>
 				</Stack>
-			</Stack>
+			</div>
 		);
 	}
 };
