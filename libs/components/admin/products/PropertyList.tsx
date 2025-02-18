@@ -17,9 +17,6 @@ import { Stack } from '@mui/material';
 import { REACT_APP_API_URL } from '../../../config';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Typography from '@mui/material/Typography';
-import { PropertyStatus } from '../../../enums/property.enum';
-import { Car } from '../../../types/car/car';
-import { CarStatus } from '../../../enums/car.enum';
 import { Product } from '../../../types/product/product';
 import { ProductStatus } from '../../../enums/product.enum';
 

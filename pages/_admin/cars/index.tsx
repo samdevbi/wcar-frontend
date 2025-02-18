@@ -8,7 +8,6 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { TabContext } from '@mui/lab';
 import TablePagination from '@mui/material/TablePagination';
-import { PropertyPanelList } from '../../../libs/components/admin/properties/PropertyList';
 import { sweetConfirmAlert, sweetErrorHandling } from '../../../libs/sweetAlert';
 import { GET_ALL_CARS_BY_ADMIN } from '../../../apollo/admin/query';
 import { useMutation, useQuery } from '@apollo/client';
@@ -18,6 +17,7 @@ import { AllCarsInquiry } from '../../../libs/types/car/car.input';
 import { Car } from '../../../libs/types/car/car';
 import { CarLocation, CarStatus } from '../../../libs/enums/car.enum';
 import { CarUpdate } from '../../../libs/types/car/car.update';
+import { PropertyPanelList } from '../../../libs/components/admin/properties/PropertyList';
 
 const AdminProperties: NextPage = ({ initialInquiry, ...props }: any) => {
 	const [anchorEl, setAnchorEl] = useState<[] | HTMLElement[]>([]);

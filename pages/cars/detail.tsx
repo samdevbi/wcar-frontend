@@ -29,7 +29,6 @@ import { T } from '../../libs/types/common';
 import { Direction, Message } from '../../libs/enums/common.enum';
 import { sweetErrorHandling, sweetMixinErrorAlert, sweetTopSmallSuccessAlert } from '../../libs/sweetAlert';
 import withLayoutBasic from '../../libs/components/layout/LayoutBasic';
-import withLayoutMain from '../../libs/components/layout/LayoutHome';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined'; // country
@@ -85,13 +84,9 @@ import VideoStableOutlinedIcon from '@mui/icons-material/VideoStableOutlined'; /
 import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined'; //hill start
 import TireRepairOutlinedIcon from '@mui/icons-material/TireRepairOutlined'; // tire pressure
 import TouchAppOutlinedIcon from '@mui/icons-material/TouchAppOutlined'; // push button
-import TrendPropertyCard from '../../libs/components/homepage/ReccomendedCarsCard';
 import PushPinOutlinedIcon from '@mui/icons-material/PushPinOutlined';
-import FitbitOutlinedIcon from '@mui/icons-material/FitbitOutlined'; // flibit
 import PasswordOutlinedIcon from '@mui/icons-material/PasswordOutlined';
-import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
 import { Car } from '../../libs/types/car/car';
-import { CarType } from '../../libs/enums/car.enum';
 import Review from '../../libs/components/car/Review';
 import RecommendedCarCard from '../../libs/components/homepage/ReccomendedCarsCard';
 import { useTranslation } from 'next-i18next';

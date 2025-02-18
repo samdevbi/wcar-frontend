@@ -1,11 +1,6 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { Stack, Box, Pagination, Link } from '@mui/material';
 import useDeviceDetect from '../../hooks/useDeviceDetect';
-import WestIcon from '@mui/icons-material/West';
-import EastIcon from '@mui/icons-material/East';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
-import TopPropertyCard from './FindingCarCard';
 import { useMutation, useQuery } from '@apollo/client';
 import { GET_CARS } from '../../../apollo/user/query';
 import { T } from '../../types/common';
@@ -17,7 +12,6 @@ import { CREATE_NOTIFICATION, LIKE_CAR, SAVE_CAR } from '../../../apollo/user/mu
 import { CarsInquiry } from '../../types/car/car.input';
 import { Car } from '../../types/car/car';
 import { useRouter } from 'next/router';
-import { CarBody } from '../../enums/car.enum';
 import { useTranslation } from 'next-i18next';
 
 interface FindingCars {

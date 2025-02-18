@@ -23,9 +23,9 @@ const PopularCarCard = (props: PopularCarCardProps) => {
 	const user = useReactiveVar(userVar);
 
 	/** HANDLERS **/
-	const pushDetailhandler = async (propertyId: string) => {
-		console.log("propertyId:", propertyId);
-		await router.push({ pathname: '/property/detail', query: { id: propertyId } })
+	const pushDetailhandler = async (carId: string) => {
+		console.log("carId:", carId);
+		await router.push({ pathname: '/cars/detail', query: { id: carId } })
 	};
 
 	if (device === 'mobile') {

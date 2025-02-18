@@ -14,7 +14,6 @@ import {
 import useDeviceDetect from '../../hooks/useDeviceDetect';
 import { useRouter } from 'next/router';
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
-import { propertySquare } from '../../config';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import { CarsInquiry } from '../../types/car/car.input';
 import { CarBody, CarBrand, CarColor, CarDriveType, CarFuelType, CarGroup, CarLocation, CarMadeIn, CarTransmission, CarType } from '../../enums/car.enum';
