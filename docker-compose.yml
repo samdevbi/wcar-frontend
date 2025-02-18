@@ -1,0 +1,25 @@
+version: "3.3"
+
+services: 
+  wcar-client: 
+    container_name: wcar-client
+    restart: always
+    image: node:20.18.1
+    ports: 
+      - 3022:3000
+    environment: 
+      - PORT=3000
+
+    volumes: 
+      - ./:/user/src/wcar-client
+    working_dir: /user/src/wcar-client
+
+    networks: 
+      - client-network
+    
+    command: bash -c "yarn && yarn run build && yarn run start"
+
+
+networks: 
+  client-network:
+    driver: bridge
