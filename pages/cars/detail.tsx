@@ -397,7 +397,7 @@ const CarDetailList: NextPage = ({ initialComment, ...props }: any) => {
                                 <Stack className={'right-box'}>
                                     <Stack className="buttons">
                                         <Typography>{t('Save')}</Typography>
-                                        <Box className={'save-box'}>
+                                        <Stack className={'save-box'}>
                                             {car?.meSaved && car?.meSaved[0]?.mySaved ? (
 
                                                 <BookmarkIcon
@@ -411,7 +411,7 @@ const CarDetailList: NextPage = ({ initialComment, ...props }: any) => {
                                                     onClick={() => saveCarHandler(user, car?._id)}
                                                 />
                                             )}
-                                        </Box>
+                                        </Stack>
                                         <Stack className="button-box">
                                             <RemoveRedEyeIcon fontSize="medium" />
                                             <Typography>{car?.carViews}</Typography>
@@ -463,7 +463,7 @@ const CarDetailList: NextPage = ({ initialComment, ...props }: any) => {
                                 <Stack className={'prop-desc-config'}>
                                     <Stack className={'top'}>
                                         <Typography className={'title'}>{t('Car Overview')}</Typography>
-                                        <Box className={'under-box'}>
+                                        <Stack className={'under-box'}>
                                             <Typography className={'desc'}>
                                                 <PushPinOutlinedIcon className={'icon'} />
                                                 {t('Address')}: {car?.carAddress}
@@ -473,7 +473,7 @@ const CarDetailList: NextPage = ({ initialComment, ...props }: any) => {
                                                     <span>{car?.carGroup}</span>
                                                 </div>
                                             ) : (null)}
-                                        </Box>
+                                        </Stack>
                                     </Stack>
                                     <Stack className={'bottom'}>
                                         <Stack className={'info-box'}>

@@ -6,8 +6,8 @@ import useDeviceDetect from '../../libs/hooks/useDeviceDetect';
 import withLayoutBasic from '../../libs/components/layout/LayoutBasic';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import Notice from '../../libs/components/cs/Notice';
 import Faq from '../../libs/components/cs/Faq';
+import NoticeComponent from '../../libs/components/cs/Notice';
 
 export const getStaticProps = async ({ locale }: any) => ({
 	props: {
@@ -65,7 +65,7 @@ const CS: NextPage = () => {
 					</Stack>
 
 					<Stack component={'div'} className={'cs-content'}>
-						{tab === 'notice' && <Notice />}
+						{tab === 'notice' && <NoticeComponent />}
 
 						{tab === 'faq' && <Faq />}
 					</Stack>

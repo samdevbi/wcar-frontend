@@ -3,7 +3,7 @@ import { TotalCounter } from "../member/member";
 
 
 
-export interface Notice {
+export interface NoticeType {
     _id: string;
     noticeCategory: NoticeCategory;
     noticeStatus: NoticeStatus;
@@ -16,6 +16,6 @@ export interface Notice {
 }
 
 export interface Notices {
-    list: Notice[];
+    list: NoticeType[];
     metaCounter: TotalCounter[];
 }

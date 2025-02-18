@@ -9,7 +9,7 @@ import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownR
 import { useQuery } from '@apollo/client';
 import { GET_NOTICES } from '../../../apollo/admin/query';
 import { NoticeCategory, NoticeGroup, NoticeStatus } from '../../enums/notice.enum';
-import { Notice } from '../../types/notice/notice';
+import { NoticeType } from '../../types/notice/notice';
 import notice from '../../../pages/_admin/cs/notice';
 import { useTranslation } from 'next-i18next';
 
@@ -42,7 +42,7 @@ const Faq = () => {
 	const { t, i18n } = useTranslation('common');
 	const [category, setCategory] = useState<string>('CAR');
 	const [expanded, setExpanded] = useState<string | false>('panel1');
-	const [notices, setNotices] = useState<Notice[]>([]);
+	const [notices, setNotices] = useState<NoticeType[]>([]);
 	const [total, setTotal] = useState<number>(0);
 
 	/** APOLLO REQUESTS **/
@@ -156,7 +156,7 @@ const Faq = () => {
 				</Box>
 				<Box className={'wrap'} component={'div'}>
 					{notices &&
-						notices.map((notice: Notice) => (
+						notices.map((notice: NoticeType) => (
 							<Accordion expanded={expanded === notice?._id} onChange={handleChange(notice?._id)} key={notice?.noticeContent}>
 								<AccordionSummary id="panel1d-header" className="question" aria-controls="panel1d-content">
 									<Typography className="badge" variant={'h4'}>

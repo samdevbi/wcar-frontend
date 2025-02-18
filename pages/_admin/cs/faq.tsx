@@ -20,7 +20,7 @@ import { useMutation, useQuery } from '@apollo/client';
 import { CREATE_NOTICE, UPDATE_NOTICE } from '../../../apollo/admin/mutation';
 import { sweetErrorHandling, sweetMixinSuccessAlert } from '../../../libs/sweetAlert';
 import { NoticeCategory, NoticeGroup, NoticeStatus } from '../../../libs/enums/notice.enum';
-import { Notice } from '../../../libs/types/notice/notice';
+import { NoticeType } from '../../../libs/types/notice/notice';
 import { NoticeUpdate } from '../../../libs/types/notice/notice.update';
 
 const FaqArticles: NextPage = (initialInput, ...props: any) => {
@@ -33,7 +33,7 @@ const FaqArticles: NextPage = (initialInput, ...props: any) => {
 	const [noticeCategory, setNoticeCategory] = useState<NoticeCategory[]>(Object.values(NoticeCategory));
 	const [noticeStatus, setNoticeStatus] = useState<NoticeStatus[]>(Object.values(NoticeStatus));
 	const [noticeGroup, setNoticeGroup] = useState<NoticeGroup[]>(Object.values(NoticeGroup));
-	const [notices, setNotices] = useState<Notice[]>([]);
+	const [notices, setNotices] = useState<NoticeType[]>([]);
 	const [total, setTotal] = useState<number>(0);
 
 	const [createNotice] = useMutation(CREATE_NOTICE);

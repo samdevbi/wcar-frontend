@@ -20,12 +20,12 @@ import { CREATE_NOTICE, UPDATE_NOTICE } from '../../../apollo/admin/mutation';
 import { GET_NOTICE, GET_NOTICES } from '../../../apollo/admin/query';
 import { NoticeInput } from '../../../libs/types/notice/notice.input';
 import { sweetErrorHandling, sweetMixinSuccessAlert } from '../../../libs/sweetAlert';
-import { Notice } from '../../../libs/types/notice/notice';
+import { NoticeType } from '../../../libs/types/notice/notice';
 
 const AdminNotice: NextPage = (props: any) => {
 	const router = useRouter();
 	const [anchorEl, setAnchorEl] = useState<[] | HTMLElement[]>([]);
-	const [notices, setNotices] = useState<Notice[]>([]);
+	const [notices, setNotices] = useState<NoticeType[]>([]);
 	const [total, setTotal] = useState<number>(0);
 	const [insertNotice, setInsertNotice] = useState<NoticeInput>()
 	const [noticeStatus, setNoticeStatus] = useState<NoticeStatus[]>(Object.values(NoticeStatus));

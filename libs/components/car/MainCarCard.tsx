@@ -58,10 +58,10 @@ const MainCarCard = (props: CarCardType) => {
 						<img src={imagePath} alt="" />
 					</Link>
 					{car && car?.carRank > topCarRank && (
-						<Box component={'div'} className={'top-badge'}>
+						<Stack component={'div'} className={'top-badge'}>
 							<img src="/img/icons/electricity.svg" alt="" />
 							<Typography>TOP</Typography>
-						</Box>
+						</Stack>
 					)}
 				</Stack>
 				<Stack className="bottom">
@@ -89,29 +89,29 @@ const MainCarCard = (props: CarCardType) => {
 					</Stack>
 					<Stack className="options">
 						<Stack className="option">
-							<Box className={'box'}>
+							<div className={'box'}>
 								<img src="/img/icons/speedb.svg" alt="" /> <Typography>{t('Mileage')}</Typography>
-							</Box>
+							</div>
 							<Typography>{car?.carMileage} {t('Mile')}</Typography>
 						</Stack>
 						<Stack className="option">
-							<Box className={'box'}>
+							<div className={'box'}>
 								<img src="/img/icons/petrolb.svg" alt="" /> <Typography>{t('Petrol')}</Typography>
-							</Box>
+							</div>
 							<Typography>{car?.carFuelType}</Typography>
 						</Stack>
 						<Stack className="option">
-							<Box className={'box'}>
+							<div className={'box'}>
 								<img src="/img/icons/transb.svg" alt="" /> <Typography>{t('Transmission')}</Typography>
-							</Box>
+							</div>
 							<Typography>{car?.carTransmission}</Typography>
 						</Stack>
 					</Stack>
 					<Stack className="type-buttons">
 						<Stack className="type">
-							{car?.carRent === true && (<Box className={'feature'}>{t('Rent')}</Box>)}
-							{car?.carBarter === true && (<Box className={'feature'}>{t('Barter')}</Box>)}
-							{car?.carBluetoothConnectivity === true && (<Box className={'feature'}>{t('Bluetooth')}</Box>)}
+							{car?.carRent === true && (<div className={'feature'}>{t('Rent')}</div>)}
+							{car?.carBarter === true && (<div className={'feature'}>{t('Barter')}</div>)}
+							{car?.carBluetoothConnectivity === true && (<div className={'feature'}>{t('Bluetooth')}</div>)}
 						</Stack>
 					</Stack>
 				</Stack>
@@ -135,7 +135,7 @@ const MainCarCard = (props: CarCardType) => {
 							<Typography className="view-cnt">{car?.carLikes}</Typography>
 						</Stack>
 					)}
-					<Box className={'save-box'}>
+					<div className={'save-box'}>
 						<span>{t('Save')}</span>
 						<div onClick={() => saveCarHandler(user, car?._id)}>
 							{mySaved ? (
@@ -149,11 +149,11 @@ const MainCarCard = (props: CarCardType) => {
 								<BookmarkBorderIcon />
 							)}
 						</div>
-					</Box>
+					</div>
 					<Typography className={'price'}>${car?.carPrice}</Typography>
-					<Box className={'btn-box'}>
+					<div className={'btn-box'}>
 						<Button className={'button'} onClick={() => pushDetailhandler(car?._id)}>{t('View Detail')}</Button>
-					</Box>
+					</div>
 				</Stack>
 			</Stack>
 		);
