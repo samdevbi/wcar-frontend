@@ -1,6 +1,6 @@
 import React from 'react';
 import useDeviceDetect from '../../hooks/useDeviceDetect';
-import { Stack, Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Link from 'next/link';
 import { REACT_APP_API_URL } from '../../config';
 import IconButton from '@mui/material/IconButton';
@@ -19,61 +19,61 @@ const MembershipCard = () => {
 		return <div>MEMBERSHIP CARD</div>;
 	} else {
 		return (
-			<Stack className="membership-general-card">
-				<Stack className={'agent-month'}>
-					<Box component={'div'} className={'agent-info'}>
+			<div className="membership-general-card">
+				<div className={'agent-month'}>
+					<div className={'agent-info'}>
 						<strong>$49.9</strong>
-					</Box>
+					</div>
 					<Typography>/monthly</Typography>
-				</Stack>
+				</div>
 
-				<Stack className={'agent-plan'}>
-					<Box component={'div'} className={'agent-info'}>
+				<div className={'agent-plan'}>
+					<div className={'agent-info'}>
 						<strong>Basic Plan</strong>
-					</Box>
+					</div>
 					<Typography >Nottingham Road, Alfreton, Derbyshire, DE55 4GR</Typography>
-				</Stack>
-				<Stack className={'agent-desc'}>
-					<Box component={'div'} className={'agent-info'}>
-						<Box className={'icon-box'}>
+				</div>
+				<div className={'agent-desc'}>
+					<div className={'agent-info'}>
+						<div className={'icon-div'}>
 							<CheckOutlinedIcon className={'icon'} />
-						</Box>
+						</div>
 						<strong>KIA London Branch</strong>
-					</Box>
-					<Box component={'div'} className={'agent-info'}>
-						<Box className={'icon-box'}>
+					</div>
+					<div className={'agent-info'}>
+						<div className={'icon-div'}>
 							<CheckOutlinedIcon className={'icon'} />
-						</Box>
+						</div>
 						<strong>KIA London Branch</strong>
-					</Box>
-					<Box component={'div'} className={'agent-info'}>
-						<Box className={'icon-box'}>
+					</div>
+					<div className={'agent-info'}>
+						<div className={'icon-div'}>
 							<CheckOutlinedIcon className={'icon'} />
-						</Box>
+						</div>
 						<strong>KIA London Branch</strong>
-					</Box>
-					<Box component={'div'} className={'agent-info'}>
-						<Box className={'icon-box'}>
+					</div>
+					<div className={'agent-info'}>
+						<div className={'icon-div'}>
 							<CheckOutlinedIcon className={'icon'} />
-						</Box>
+						</div>
 						<strong>KIA London Branch</strong>
-					</Box>
-					<Box component={'div'} className={'agent-info'}>
-						<Box className={'icon-box'}>
+					</div>
+					<div className={'agent-info'}>
+						<div className={'icon-div'}>
 							<CheckOutlinedIcon className={'icon'} />
-						</Box>
+						</div>
 						<strong>KIA London Branch</strong>
-					</Box>
-					<Box component={'div'} className={'agent-info'}>
-						<Box className={'icon-box'}>
+					</div>
+					<div className={'agent-info'}>
+						<div className={'icon-div'}>
 							<CheckOutlinedIcon className={'icon'} />
-						</Box>
+						</div>
 						<strong>KIA London Branch</strong>
-					</Box>
-				</Stack>
+					</div>
+				</div>
 
-				<Stack className={'button'}>
-					<Box component={'div'} className={'agent-info'}>
+				<div className={'button'}>
+					<div className={'agent-info'}>
 						<Link
 							href={{
 								pathname: '/service/membership',
@@ -82,9 +82,9 @@ const MembershipCard = () => {
 							<strong className={'buy'}>Buy Now</strong>
 							<NorthEastOutlinedIcon className={'btn-icon'} />
 						</Link>
-					</Box>
-				</Stack>
-			</Stack>
+					</div>
+				</div>
+			</div>
 		);
 	}
 };
