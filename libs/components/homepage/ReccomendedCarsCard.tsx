@@ -33,8 +33,8 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 		return <div>WCAR RECOM CAR CARD MOBILE</div>;
 	} else {
 		return (
-			<Stack className="trend-card-box" key={car?._id}>
-				<Stack
+			<div className="trend-card-box" key={car?._id}>
+				<div
 					className={'card-img'}
 					style={{ backgroundImage: `url(${REACT_APP_API_URL}/${car?.carImages?.[0]})` }}
 					onClick={() => {
@@ -70,8 +70,8 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 						/>
 					)}
 					<div>Top Car</div>
-				</Stack>
-				<Stack component={'div'} className={'info'}>
+				</div>
+				<div className={'info'}>
 					<strong className={'title'}
 						onClick={() => {
 							pushDetailhandler(car?._id);
@@ -113,8 +113,8 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 							<Typography className="view-cnt">{car?.carLikes}</Typography>
 						</div>
 					</div>
-				</Stack>
-			</Stack>
+				</div>
+			</div>
 		);
 	}
 };
