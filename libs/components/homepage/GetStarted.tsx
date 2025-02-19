@@ -17,22 +17,22 @@ const GetStarted = (props: any) => {
             <>
                 <Stack className={'get-box'}>
                     <Stack className={'under-box'}>
-                        <Box className={'text'}>
+                        <div className={'text'}>
                             <div>796M</div>
                             <span>{t('CARS FOR SALE')}</span>
-                        </Box>
-                        <Box className={'text'}>
+                        </div>
+                        <div className={'text'}>
                             <div>834M</div>
                             <span>{t('DEALERS REVIEWS')}</span>
-                        </Box>
-                        <Box className={'text'}>
+                        </div>
+                        <div className={'text'}>
                             <div>957M</div>
                             <span>{t('VISITORS PER DAY')}</span>
-                        </Box>
-                        <Box className={'text'}>
+                        </div>
+                        <div className={'text'}>
                             <div>123M</div>
                             <span>{t('VERIFIED DEALERS')}</span>
-                        </Box>
+                        </div>
                     </Stack>
                     <div className={'divider'}></div>
                 </Stack>
