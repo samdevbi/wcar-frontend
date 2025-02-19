@@ -1,5 +1,3 @@
-version: "3.3"
-
 services: 
   wcar-client: 
     container_name: wcar-client
