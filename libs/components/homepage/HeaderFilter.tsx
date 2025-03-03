@@ -154,26 +154,26 @@ const HeaderFilter = () => {
 			<>
 				<Stack className={'search-box'}>
 					<Stack className={'select-box'}>
-						<Box component={'div'} className={`box ${openLocation ? 'on' : ''}`} onClick={locationStateChangeHandler}>
+						<div className={`box ${openLocation ? 'on' : ''}`} onClick={locationStateChangeHandler}>
 							<span>{searchFilter?.search?.locationList ? searchFilter?.search?.locationList[0] : t('Location')} </span>
 							<ExpandMoreIcon />
-						</Box>
+						</div>
 						<div className={`box ${openMadeIn ? 'on' : ''}`} onClick={madeInStateChangeHandler}>
 							<span> {searchFilter?.search?.madeInList ? searchFilter?.search?.madeInList[0] : t('Made In')} </span>
 							<ExpandMoreIcon />
 						</div>
-						<Box className={`box ${openBrand ? 'on' : ''}`} onClick={brandStateChangeHandler}>
+						<div className={`box ${openBrand ? 'on' : ''}`} onClick={brandStateChangeHandler}>
 							<span>
 								{searchFilter?.search?.brandList ? `${searchFilter?.search?.brandList[0]} ` : t('Brand')}
 							</span>
 							<ExpandMoreIcon />
-						</Box>
+						</div>
 					</Stack>
 					<Stack className={'search-box-other'}>
 						<Typography>Search...</Typography>
-						<Box className={'search-btn'} onClick={pushSearchHandler}>
+						<div className={'search-btn'} onClick={pushSearchHandler}>
 							<img src="/img/icons/search_white.svg" alt="" />
-						</Box>
+						</div>
 					</Stack>
 
 					{/*MENU */}
