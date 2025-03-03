@@ -158,10 +158,10 @@ const HeaderFilter = () => {
 							<span>{searchFilter?.search?.locationList ? searchFilter?.search?.locationList[0] : t('Location')} </span>
 							<ExpandMoreIcon />
 						</Box>
-						<Box className={`box ${openMadeIn ? 'on' : ''}`} onClick={madeInStateChangeHandler}>
+						<div className={`box ${openMadeIn ? 'on' : ''}`} onClick={madeInStateChangeHandler}>
 							<span> {searchFilter?.search?.madeInList ? searchFilter?.search?.madeInList[0] : t('Made In')} </span>
 							<ExpandMoreIcon />
-						</Box>
+						</div>
 						<Box className={`box ${openBrand ? 'on' : ''}`} onClick={brandStateChangeHandler}>
 							<span>
 								{searchFilter?.search?.brandList ? `${searchFilter?.search?.brandList[0]} ` : t('Brand')}
