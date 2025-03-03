@@ -2411,7 +2411,7 @@ query GetArticles($input: ArticlesInquiry!) {
 }`
 
 // export const GET_BOARD_ARTICLES = gql`
-// 	query GetBoardArticles($input: BoardArticlesInquiry!) {
+// 	query ($input: BoardArticlesInquiry!) {
 // 		getBoardArticles(input: $input) {
 // 			list {
 // 				_id

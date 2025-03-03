@@ -329,8 +329,8 @@ query GetAllProductsByAdmin($input: AllProductsInquiry!) {
  *************************/
 
 export const GET_ALL_BOARD_ARTICLES_BY_ADMIN = gql`
-	query GetAllBoardArticlesByAdmin($input: AllBoardArticlesInquiry!) {
-		getAllBoardArticlesByAdmin(input: $input) {
+	query GetAllArticlesByAdmin($input: AllArticlesInquiry!) {
+		getAllArticlesByAdmin(input: $input) {
 			list {
 				_id
 				articleCategory

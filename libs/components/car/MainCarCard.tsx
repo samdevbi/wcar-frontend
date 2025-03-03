@@ -59,7 +59,6 @@ const MainCarCard = (props: CarCardType) => {
 					</Link>
 					{car && car?.carRank > topCarRank && (
 						<Stack component={'div'} className={'top-badge'}>
-							<img src="/img/icons/electricity.svg" alt="" />
 							<Typography>TOP</Typography>
 						</Stack>
 					)}
