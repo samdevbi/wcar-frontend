@@ -370,8 +370,8 @@ mutation RemoveProductByAdmin($input: String!) {
  *************************/
 
 export const UPDATE_BOARD_ARTICLE_BY_ADMIN = gql`
-	mutation UpdateBoardArticleByAdmin($input: BoardArticleUpdate!) {
-		updateBoardArticleByAdmin(input: $input) {
+	mutation UpdateArticleByAdmin($input: ArticleUpdate!) {
+		updateArticleByAdmin(input: $input) {
 			_id
 			articleCategory
 			articleStatus
@@ -388,8 +388,8 @@ export const UPDATE_BOARD_ARTICLE_BY_ADMIN = gql`
 `;
 
 export const REMOVE_BOARD_ARTICLE_BY_ADMIN = gql`
-	mutation RemoveBoardArticleByAdmin($input: String!) {
-		removeBoardArticleByAdmin(articleId: $input) {
+	mutation RemoveArticleByAdmin($input: String!) {
+		removeArticleByAdmin(articleId: $input) {
 			_id
 			articleCategory
 			articleStatus

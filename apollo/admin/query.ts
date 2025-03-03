@@ -330,105 +330,26 @@ query GetAllProductsByAdmin($input: AllProductsInquiry!) {
 
 export const GET_ALL_BOARD_ARTICLES_BY_ADMIN = gql`
 	query GetAllArticlesByAdmin($input: AllArticlesInquiry!) {
-		getAllArticlesByAdmin(input: $input) {
-			list {
-				_id
-				articleCategory
-				articleStatus
-				articleTitle
-				articleContent
-				articleImage
-				articleViews
-				articleLikes
-				memberId
-				createdAt
-				updatedAt
-				memberData {
-					       _id
-            type
-            status
-            authType
-            titleNick
-            fullName
-            image
-            viewImage
-            address
-            shortDesc
-            longDesc
-            phone
-            phone2
-            email
-            kakaoTalk
-            youtube
-            instagram
-            facebook
-            tikTok
-            naverBlog
-            xcom
-            followers
-            followings
-            likes
-            views
-            comments
-            warnings
-            articles
-            blocks
-            memberCars
-            usedCars
-            newCars
-            rank
-            points
-            sellerProducts
-            dealerFinancing
-            dealerCarService
-            dealerTradeIn
-            dealerCustomization
-            dealerWarranties
-            dealerParts
-            dealerAccessories
-            dealerCarDetailing
-            dealerCarWash
-            dealerCarTestDrive
-            dealerCarDelivery
-            carOilChange
-            carAlignment
-            carTireChange
-            carBrakeCheck
-            carBatteryCheck
-            carTireBalance
-            carSuspension
-            carAirCondition
-            carTransmissionCheck
-            carEngineDiagnostic
-            carExhaust
-            carDetailing
-            carWindshield
-            carTimingBelt
-            carChainReplacement
-            comfort
-            performance
-            exterior
-            interior
-            reliability
-            fast
-            openAt
-            closeAt
-            openSunday
-            closeSunday
-            openSaturday
-            closeSaturday
-            publicHolidays
-            deletedAt
+    getAllArticlesByAdmin(input: $input) {
+        list {
+            _id
+            articleCategory
+            articleStatus
+            articleTitle
+            articleContent
+            articleImage
+            articleViews
+            articleLikes
+            articleComments
+            memberId
             createdAt
             updatedAt
-            accessToken
-				}
-			}
-			metaCounter {
-				total
-			}
-		}
-	}
+        }
+        metaCounter {
+            total
+        }
+    }
+}
 `;
 
 /**************************

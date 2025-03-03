@@ -35,15 +35,24 @@ const AdminCommunity: NextPage = ({ initialInquiry, ...props }: any) => {
 	const [removeBoardArticleByAdmin] = useMutation(REMOVE_BOARD_ARTICLE_BY_ADMIN);
 
 	const {
-		loading: getAllBoardArticlesByAdminLoading,
-		data: getAllBoardArticlesByAdminData,
-		error: getAllBoardArticlesByAdminError,
-		refetch: getAllBoardArticlesRefetch,
+		loading: getAllArticlesByAdminLoading,
+		data: getAllArticlesByAdminData,
+		error: getAllArticlesByAdminError,
+		refetch: getAllArticlesByAdminRefetch,
 	} = useQuery(GET_ALL_BOARD_ARTICLES_BY_ADMIN, {
 		fetchPolicy: 'network-only',
-		variables: { input: community },
+		variables: {
+			input: {
+				page: 1,
+				limit: 10,
+				sort: 'createdAt',
+				direction: 'DESC',
+				search: {},
+			}
+		},
 		notifyOnNetworkStatusChange: true,
 		onCompleted: (data: T) => {
+			console.log('data article', data)
 			setArticles(data?.getAllArticlesByAdmin?.list);
 			setArticleTotal(data?.getAllArticlesByAdmin?.metaCounter[0]?.total ?? 0);
 		},
@@ -51,20 +60,20 @@ const AdminCommunity: NextPage = ({ initialInquiry, ...props }: any) => {
 
 	/** LIFECYCLES **/
 	useEffect(() => {
-		getAllBoardArticlesRefetch({ input: communityInquiry });
+		getAllArticlesByAdminRefetch({ input: communityInquiry });
 	}, [communityInquiry]);
 
 	/** HANDLERS **/
 	const changePageHandler = async (event: unknown, newPage: number) => {
 		communityInquiry.page = newPage + 1;
-		await getAllBoardArticlesRefetch({ input: communityInquiry });
+		await getAllArticlesByAdminRefetch({ input: communityInquiry });
 		setCommunityInquiry({ ...communityInquiry });
 	};
 
 	const changeRowsPerPageHandler = async (event: React.ChangeEvent<HTMLInputElement>) => {
 		communityInquiry.limit = parseInt(event.target.value, 10);
 		communityInquiry.page = 1;
-		await getAllBoardArticlesRefetch({ input: communityInquiry });
+		await getAllArticlesByAdminRefetch({ input: communityInquiry });
 		setCommunityInquiry({ ...communityInquiry });
 	};
 
@@ -129,7 +138,7 @@ const AdminCommunity: NextPage = ({ initialInquiry, ...props }: any) => {
 				},
 			});
 			menuIconCloseHandler();
-			await getAllBoardArticlesRefetch({ input: communityInquiry });
+			await getAllArticlesByAdminRefetch({ input: communityInquiry });
 			menuIconCloseHandler();
 		} catch (err: any) {
 			menuIconCloseHandler();
@@ -146,15 +155,13 @@ const AdminCommunity: NextPage = ({ initialInquiry, ...props }: any) => {
 					},
 				});
 
-				await getAllBoardArticlesRefetch({ input: communityInquiry });
+				await getAllArticlesByAdminRefetch({ input: communityInquiry });
 			}
 		} catch (err: any) {
 			sweetErrorHandling(err).then();
 		}
 	};
 
-	console.log('+communityInquiry', communityInquiry);
-	console.log('+articles', articles);
 
 	return (
 		<Box component={'div'} className={'content'}>
