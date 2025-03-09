@@ -53,10 +53,6 @@ const PopularCars = (props: PopularProductsProps) => {
 			<Stack className={'popular-properties'}>
 				<Stack className={'container'}>
 					<Stack className={'info-box'}>
-						<Box component={'div'} className={'left'}>
-							<span>{t('Popular Products')}</span>
-							<p>{t('We present to you the Products most viewed by users')}</p>
-						</Box>
 						<Box component={'div'} className={'right'}>
 							<div className={'more-box'}>
 								<Link href={'/shop'}>
@@ -67,32 +63,11 @@ const PopularCars = (props: PopularProductsProps) => {
 						</Box>
 					</Stack>
 					<Stack className={'card-box'}>
-						<Swiper
-							className={'popular-property-swiper'}
-							slidesPerView={'auto'}
-							spaceBetween={25}
-							modules={[Autoplay, Navigation, Pagination]}
-							navigation={{
-								nextEl: '.swiper-popular-next',
-								prevEl: '.swiper-popular-prev',
-							}}
-							pagination={{
-								el: '.swiper-popular-pagination',
-							}}
-						>
-							{popularProducts.map((product: Product) => {
-								return (
-									<SwiperSlide key={product._id} className={'popular-property-slide'}>
-										<ProductCard product={product} key={product?._id} />
-									</SwiperSlide>
-								);
-							})}
-						</Swiper>
-					</Stack>
-					<Stack className={'pagination-box'}>
-						<WestIcon className={'swiper-popular-prev'} />
-						<div className={'swiper-popular-pagination'}></div>
-						<EastIcon className={'swiper-popular-next'} />
+						{popularProducts.map((product: Product) => {
+							return (
+								<ProductCard product={product} key={product?._id} />
+							);
+						})}
 					</Stack>
 				</Stack>
 			</Stack>
@@ -103,7 +78,7 @@ const PopularCars = (props: PopularProductsProps) => {
 PopularCars.defaultProps = {
 	initialInput: {
 		page: 1,
-		limit: 20,
+		limit: 5,
 		sort: 'createdAt',
 		direction: 'DESC',
 		search: {},

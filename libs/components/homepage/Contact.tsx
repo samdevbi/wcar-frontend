@@ -17,16 +17,6 @@ const LayoutFilter = (props: any) => {
                         <div className={'small-text'}>{t('We make finding the right car simple')}</div>
                         <div className={'big-text'}>{t('Search Less. Watch More')}</div>
                     </Stack>
-                    <Stack className={'view'}>
-                        <Link href="/cars" className={'view-car'}>
-                            <span className={'cars'}>{t('View Cars')}</span>
-                            <NorthEastRoundedIcon />
-                        </Link>
-                        <Link href="/cs" className={'contact-us'}>
-                            <span className={'contact'}>{t('Contact')}</span>
-                            <NorthEastRoundedIcon />
-                        </Link>
-                    </Stack>
                 </Stack>
             </>
         )

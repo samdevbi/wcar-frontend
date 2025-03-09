@@ -80,20 +80,20 @@ const FindingCarCard = (props: FinndingCarCardProps) => {
 						onClick={() => {
 							pushDetailhandler(car?._id);
 						}}>{car?.carTitle}</strong>
-					<p className={'desc'}>{car?.carAddress}</p>
+					<p className={'desc'}>By {car?.creatorData?.type} - {car?.creatorData?.titleNick}</p>
 					<Divider sx={{ mt: '2px', mb: '2px' }} />
 					<div className={'options'}>
 						<div>
-							<img src="/img/icons/speed.svg" alt="" />
-							<span>{car?.carMileage} Mile </span>
+							<span>{car?.carYear}/</span>
 						</div>
 						<div>
-							<img src="/img/icons/petrol.svg" alt="" />
-							<span>{car?.carFuelType}</span>
+							<span>{car?.carMileage} Mile/</span>
 						</div>
 						<div>
-							<img src="/img/icons/trans.svg" alt="" />
-							<span>{car?.carTransmission}</span>
+							<span>{car?.carFuelType}/</span>
+						</div>
+						<div>
+							<span>{car?.carDriveType}</span>
 						</div>
 					</div>
 					<Divider sx={{ mt: '5px', mb: '5px' }} />
@@ -103,14 +103,14 @@ const FindingCarCard = (props: FinndingCarCardProps) => {
 						</p>
 						<div className="view-like-box">
 							<IconButton color={'default'}>
-								<RemoveRedEyeIcon style={{ color: 'white' }} />
+								<RemoveRedEyeIcon style={{ color: '#1D2671' }} />
 							</IconButton>
 							<Typography className="view-cnt">{car?.carViews}</Typography>
 							<IconButton color={'default'} onClick={() => likeCarHandler(user, car?._id, car?.creatorData?._id)}>
 								{car?.meLiked && car?.meLiked[0]?.myFavorite ? (
 									<FavoriteIcon color="primary" />
 								) : (
-									<FavoriteBorderOutlinedIcon style={{ color: "white" }} />
+									<FavoriteBorderOutlinedIcon style={{ color: "#1D2671" }} />
 								)}
 							</IconButton>
 							<Typography className="view-cnt">{car?.carLikes}</Typography>

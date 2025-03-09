@@ -189,9 +189,6 @@ const Top = () => {
 							</Link>
 						</Box>
 						<Box component={'div'} className={'router-box'}>
-							<Link href={'/'}>
-								<div>{t('Home')}</div>
-							</Link>
 							<Link href={'/cars'}>
 								<div>{t('Cars')}</div>
 							</Link>

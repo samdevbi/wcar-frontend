@@ -94,19 +94,6 @@ const RecommendedCars = (props: RecommendedCarsProps) => {
 		return (
 			<Stack className={'trend-properties'}>
 				<Stack className={'container'}>
-					<Stack className={'info-box'}>
-						<Box component={'div'} className={'left'}>
-							<span>{t('Recommended Cars')}</span>
-							<p>{t('The best cars have been selected for you')}</p>
-						</Box>
-						<Box component={'div'} className={'right'}>
-							<div className={'pagination-box'}>
-								<ArrowBackIosNewIcon className={'swiper-trend-prev'} />
-								<div className={'swiper-trend-pagination'}></div>
-								<ArrowForwardIosIcon className={'swiper-trend-next'} />
-							</div>
-						</Box>
-					</Stack>
 					<Stack className={'card-box'}>
 						{recomCars?.length === 0 ? (
 							<Box component={'div'} className={'empty-list'}>

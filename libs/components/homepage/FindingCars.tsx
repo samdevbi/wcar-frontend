@@ -31,6 +31,7 @@ const FindingCars = (props: FindingCars) => {
 	const carPaginationChangeHandler = async (event: ChangeEvent<unknown>, value: number) => {
 		searchFilter.page = value;
 		setSearchFilter({ ...searchFilter });
+		getCarsRefetch({ input: searchFilter })
 	};
 
 
@@ -48,7 +49,7 @@ const FindingCars = (props: FindingCars) => {
 		refetch: getCarsRefetch
 	} = useQuery(GET_CARS, {
 		fetchPolicy: 'cache-and-network',
-		variables: { input: initialInput },
+		variables: { input: searchFilter ? searchFilter : initialInput },
 		notifyOnNetworkStatusChange: true,
 		onCompleted: (data: T) => {
 			setTopCars(data?.getCars?.list);
@@ -134,9 +135,6 @@ const FindingCars = (props: FindingCars) => {
 										color="secondary"
 									/>
 								</Stack>
-								<span>
-									{t('Total')} {carTotal} {t('car')}{carTotal > 1 ? 's' : ''} {t('available')}
-								</span>
 							</>
 						) : (
 							<div className={'no-data'}>
@@ -154,7 +152,7 @@ const FindingCars = (props: FindingCars) => {
 FindingCars.defaultProps = {
 	initialInput: {
 		page: 1,
-		limit: 8,
+		limit: 6,
 		sort: 'carLikes',
 		direction: 'DESC',
 		search: {},

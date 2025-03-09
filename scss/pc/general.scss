@@ -1,19 +1,12 @@
 .shop-card-config {
-	width: 300px;
-	height: 350px;
+	width: 240px;
+	height: 330px;
 	margin-top: 20px;
 	margin-bottom: 7px;
 	border-radius: 12px;
-	background: #fff;
-	border: 1px solid #ddd;
+	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 	border-radius: 0.5rem;
-	transition: transform 1s;
-
-	&:hover {
-		transform: scale(1.05);
-		border: 1px solid #405ef28c;
-		border-radius: 0.5rem;
-	}
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
 	.top {
 		position: relative;
@@ -27,12 +20,18 @@
 		}
 
 		img {
-			width: 250px;
+			width: 220px;
 			height: 200px;
-			margin-top: 20px;
+			margin-top: 9px;
 			object-fit: cover;
 			background: #717171;
 			border-radius: 0.5rem;
+			transition: transform 1s;
+
+			&:hover {
+				transform: scale(1.01);
+				border-radius: 0.5rem;
+			}
 		}
 
 		.top-badge {
@@ -95,8 +94,10 @@
 				overflow: hidden;
 
 				p {
-					width: 230px;
-					color: #181a20;
+					width: 200px;
+					background-image: linear-gradient(to left, #C33764, #1D2671);
+					-webkit-background-clip: text;
+					color: transparent;
 					font-family: $font;
 					font-size: 15px;
 					font-style: normal;
@@ -114,8 +115,10 @@
 				overflow: hidden;
 
 				p {
-					width: 230px;
-					color: #717171;
+					width: 200px;
+					background-image: linear-gradient(to left, #C33764, #1D2671);
+					-webkit-background-clip: text;
+					color: transparent;
 					font-family: $font;
 					font-size: 13px;
 					font-style: normal;
@@ -132,7 +135,7 @@
 			width: 90%;
 			height: 1px;
 			margin-bottom: 10px;
-			background: #ddd;
+			background-image: linear-gradient(to left, #C33764, #1D2671);
 		}
 
 		.type-buttons {
@@ -142,8 +145,8 @@
 			align-items: center;
 
 			.type {
-				width: 180px;
-				height: 40px;
+				width: 100px;
+				height: 30px;
 				display: flex;
 				flex-direction: row;
 				justify-content: center;
@@ -171,14 +174,14 @@
 					margin-left: 5px;
 					color: #405FF2;
 					font-family: $font;
-					font-size: 18px;
+					font-size: 15px;
 					font-style: normal;
 					line-height: normal;
 				}
 
 				.icon {
-					width: 18px;
-					height: 18px;
+					width: 15px;
+					height: 15px;
 					color: #405FF2;
 					margin-bottom: 2px;
 				}
@@ -216,26 +219,27 @@
 	width: 380px;
 	height: 450px;
 	margin-left: 15px;
-	margin-bottom: 100px;
 	display: flex;
 	flex-direction: column;
-	transition: transform 0.3s;
-	border-radius: 0.8rem;
-
-	&:hover {
-		opacity: 1;
-		transform: scale(1.05);
-	}
 
 	.card-img {
 		position: relative;
 		width: 100%;
 		height: 250px;
 		background-size: cover;
-		border-radius: 12px 12px 0px 0px;
+		border-radius: 0.1rem;
 		background-position: center;
 		background-size: cover;
 		cursor: pointer;
+		border-radius: 0.2rem;
+		transition: transform 0.3s;
+		box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+		&:hover {
+			opacity: 1;
+			transform: scale(1.05);
+			box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+		}
 
 		div {
 			width: 24px;
@@ -255,25 +259,29 @@
 	}
 
 	.info {
-		height: 200px;
-		padding: 20px 22px 17px;
+		padding: 10px;
+		margin-top: 10px;
+		height: 160px;
 		display: flex;
 		flex-direction: column;
 		box-sizing: border-box;
-		border-radius: 0px 0px 12px 12px;
 		border-top: none;
-		background: #001e1c;
+		background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+		border-radius: 0.3rem;
 
 
 		.title {
 			overflow: hidden;
-			color: #fff;
+			background-image: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c);
+			-webkit-background-clip: text;
+			color: transparent;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			font-family: $font;
-			font-size: 18px;
+			font-size: 20px;
 			font-style: normal;
-			font-weight: 600;
+			font-weight: 700;
 			line-height: normal;
 			text-transform: capitalize;
 			cursor: pointer;
@@ -282,21 +290,22 @@
 		.desc {
 			margin-top: 5px;
 			overflow: hidden;
-			color: #fff;
+			background-image: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c);
+			-webkit-background-clip: text;
+			color: transparent;
 			font-family: $font;
-			font-size: 13px;
+			font-size: 17px;
 			font-style: normal;
-			font-weight: 400;
+			font-weight: 600;
 			line-height: normal;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
 
 		.options {
-			margin-top: 15px;
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: flex-start;
 
 			div {
 				display: flex;
@@ -304,16 +313,12 @@
 				justify-content: center;
 				align-items: center;
 
-				img {
-					margin-right: 5px;
-					width: 17px;
-					height: 17px;
-				}
-
 				span {
-					color: #fff;
+					background-image: linear-gradient(to left, #3a6186, #b21f1f, #89253e);
+					-webkit-background-clip: text;
+					color: transparent;
 					font-family: $font;
-					font-size: 13px;
+					font-size: 14px;
 					font-style: normal;
 					font-weight: 400;
 					line-height: normal;
@@ -322,37 +327,39 @@
 		}
 
 		.bott {
-			margin-top: 10px;
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: flex-start;
 			align-items: center;
 
 			p {
-				color: #fff;
+				background-image: linear-gradient(to left, #3a6186, #b21f1f, #89253e);
+				-webkit-background-clip: text;
+				color: transparent;
 				font-family: $font;
 				font-size: 20px;
 				font-style: normal;
-				font-weight: 400;
+				font-weight: 600;
 				line-height: normal;
 				text-transform: capitalize;
-			}
-
-			button {
-				margin-left: 7px;
-				width: 16px;
-				height: 16px;
-				box-sizing: border-box;
+				letter-spacing: 1px;
 			}
 
 			.view-like-box {
+				margin-left: 180px;
 				display: flex;
 				flex-direction: row;
 				gap: 7px;
 				align-items: center;
 
+				button {
+					margin-left: 7px;
+					width: 16px;
+					height: 16px;
+					box-sizing: border-box;
+				}
+
 				.view-cnt {
-					color: #fff;
 					font-family: $font;
 					font-size: 13px;
 					font-style: normal;
@@ -367,46 +374,49 @@
 
 .trend-card-box {
 	position: relative;
-	width: 700px;
+	width: 230px;
 	height: 300px;
 	margin-top: 15px;
-	margin-left: 20px;
+	margin-left: 10px;
 	display: flex;
-	flex-direction: row;
-	transition: transform 0.3s;
-
-	&:hover {
-		opacity: 1;
-		transform: scale(1.05);
-	}
+	flex-direction: column;
 
 	.card-img {
 		position: relative;
-		width: 500px;
-		height: 300px;
+		width: 230px;
+		height: 130px;
 		background-size: cover;
-		border-radius: 12px 0px 0px 12px;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius: 5px;
 		cursor: pointer;
+
+		transition: transform 0.3s;
+
+		&:hover {
+			opacity: 1;
+			transform: scale(1.05);
+		}
 
 		.top-badge {
 			position: absolute;
 			top: 12px;
-			left: 50px;
+			right: 10px;
 			display: flex;
-			width: 40px;
-			height: 20px;
+			width: 20px;
+			height: 10px;
 			justify-content: center;
 			align-items: center;
 			border-radius: 6px;
 			padding: 6px 20px;
-			background: #405FF2;
-			color: #fff;
+			background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+			color: #1D2671;
 			text-align: center;
 			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 			font-family: $font;
-			font-size: 12px;
+			font-size: 3px;
 			font-style: normal;
-			font-weight: 600;
+			font-weight: 400;
 			line-height: normal;
 
 			img {
@@ -444,28 +454,35 @@
 	}
 
 	.info {
-		padding: 20px 15px 10px;
-		width: 175px;
+		width: 230px;
+		height: 110px;
 		display: flex;
 		flex-direction: column;
 		box-sizing: border-box;
-		border-radius: 0px 12px 12px 0px;
-		border: 1px solid rgba(196, 196, 196, 0.71);
 		border-top: none;
-		background: #001251;
-		box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
+
+		.divider-recom {
+			background-image: linear-gradient(to left, #C33764, #1D2671);
+			height: 2px;
+		}
 
 		.title {
-			overflow: hidden;
-			color: #fff;
-			text-overflow: ellipsis;
-			white-space: nowrap;
+			width: 220px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			background-image: linear-gradient(to left, #C33764, #1D2671);
+			-webkit-background-clip: text;
+			color: transparent;
 			font-family: $font;
-			font-size: 17px;
+			font-size: 18px;
 			font-style: normal;
-			font-weight: 600;
+			font-weight: 500;
 			line-height: normal;
-			text-transform: capitalize;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 			cursor: pointer;
 		}
 
@@ -473,21 +490,23 @@
 			margin-top: 5px;
 			height: auto;
 			overflow: hidden;
-			color: #fff;
+			background-image: linear-gradient(to left, #C33764, #1D2671);
+			-webkit-background-clip: text;
+			color: transparent;
 			font-family: $font;
-			font-size: 15px;
+			font-size: 25px;
 			font-style: normal;
-			font-weight: 400;
+			font-weight: 600;
 			line-height: normal;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
 
 		.options {
-			margin-top: 30px;
+			margin-top: 10px;
 			margin-bottom: 10px;
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			justify-content: space-between;
 			gap: 10px;
 
@@ -497,61 +516,22 @@
 				justify-content: flex-start;
 				align-items: center;
 
-				img {
+				.img {
 					margin-right: 5px;
-					width: 18px;
-					height: 18px;
+					width: 15px;
+					height: 15px;
+					color: #1D2671;
 				}
 
 				span {
-					color: #fff;
+					background-image: linear-gradient(to left, #C33764, #1D2671);
+					-webkit-background-clip: text;
+					color: transparent;
 					font-family: $font;
-					font-size: 15px;
+					font-size: 14px;
 					font-style: normal;
-					font-weight: 600;
+					font-weight: 300;
 					line-height: normal;
-				}
-			}
-		}
-
-		.bott {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
-
-			p {
-				color: #fff;
-				font-family: $font;
-				font-size: 13px;
-				font-style: normal;
-				font-weight: 400;
-				line-height: normal;
-				text-transform: capitalize;
-			}
-
-			button {
-				margin-left: 7px;
-				width: 16px;
-				height: 16px;
-				box-sizing: border-box;
-			}
-
-			.view-like-box {
-				margin-top: 10px;
-				display: flex;
-				flex-direction: row;
-				gap: 7px;
-				align-items: center;
-
-				.view-cnt {
-					color: #fff;
-					font-family: $font;
-					font-size: 13px;
-					font-style: normal;
-					font-weight: 400;
-					line-height: normal;
-					text-overflow: ellipsis;
 				}
 			}
 		}

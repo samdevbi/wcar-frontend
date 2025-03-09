@@ -32,13 +32,12 @@ const Home: NextPage = () => {
 			<Stack className={'home-page'}>
 				<RecommendedCars />
 				<FindingCars />
-				<Advertisement />
-				<SellCars />
 				<GetStarted />
 				<PopularProperties />
+				<Events />
+				<Advertisement />
 				<TopAgents />
 				<Feedback />
-				<Events />
 			</Stack>
 		);
 	}

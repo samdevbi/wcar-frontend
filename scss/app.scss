@@ -7,39 +7,49 @@ a {
 	text-decoration: none;
 	color: #212121;
 }
+
 button {
 	text-transform: none;
 	box-shadow: none;
 	padding: 0;
 }
+
 button.outline {
 	border: 1px solid #eee;
 }
+
 button.contain {
 	color: #fff;
 }
+
 span,
 p {
 	line-height: 1.2;
 }
+
 body {
+	background-image: linear-gradient(-225deg, #E3FDF5 0%, #D3CCE3 100%);
 	font-family: $font;
+
 	&::-webkit-scrollbar {
 		width: 9px;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		height: 30%;
 		background: #bdbdbd;
 		border-radius: 10px;
 	}
+
 	&::-webkit-scrollbar-track {
-		background: #eee;
+		background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
 	}
 
 	.MuiPopover-paper {
 		box-shadow: none;
 	}
 }
+
 hr {
 	border-width: 0;
 	border-bottom-width: thin;
@@ -49,6 +59,7 @@ hr {
 
 /** VERSION: PC **/
 #pc-wrap {
+	background-image: linear-gradient(to right, #e9defa 0%, #fbfcdb 100%);
 	width: 100%;
 	height: 100%;
 

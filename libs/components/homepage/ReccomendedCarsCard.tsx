@@ -10,6 +10,9 @@ import { useReactiveVar } from '@apollo/client';
 import { userVar } from '../../../apollo/store';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import EditCalendarIcon from '@mui/icons-material/EditCalendar';
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
+import AirlineSeatReclineExtraIcon from '@mui/icons-material/AirlineSeatReclineExtra';
 
 interface RecommendedCarCardProps {
 	car: any;
@@ -74,7 +77,6 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 							style={{ color: 'white', paddingTop: "10px", marginLeft: "10px" }}
 						/>
 					)}
-					<div>Top Car</div>
 				</div>
 				<div className={'info'}>
 					<strong className={'title'}
@@ -83,41 +85,22 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 						}}>
 						{car?.carTitle}
 					</strong>
-					<p className={'desc'}>{car?.carAddress}</p>
+					<Divider className={'divider-recom'} sx={{ mt: '2px', mb: '1px' }} />
 					<div className={'options'}>
 						<div>
-							<img src="/img/icons/speed.svg" alt="" />
-							<span>{car?.carMileage} Miles</span>
+							<EditCalendarIcon className={'img'} />
+							<span>: {car?.carYear}</span>
 						</div>
 						<div>
-							<img src="/img/icons/petrol.svg" alt="" />
-							<span>{car?.carFuelType}</span>
+							<LocalGasStationIcon className={'img'} />
+							<span>: {car?.carFuelType}</span>
 						</div>
 						<div>
-							<img src="/img/icons/trans.svg" alt="" />
-							<span>{car?.carTransmission}</span>
-						</div>
-						<div>
-							<span style={{ fontWeight: 600, fontSize: '20px' }}>${car?.carPrice}</span>
+							<AirlineSeatReclineExtraIcon className={'img'} />
+							<span>: {car?.carDriveType}</span>
 						</div>
 					</div>
-					<Divider sx={{ mt: '15px', mb: '5px' }} />
-					<div className={'bott'}>
-						<div className="view-like-box">
-							<IconButton color={'default'}>
-								<RemoveRedEyeIcon style={{ color: 'white' }} />
-							</IconButton>
-							<Typography className="view-cnt">{car?.carViews}</Typography>
-							<IconButton color={'default'} onClick={() => likeCarHandler(user, car?._id, car?.creatorData?._id)}>
-								{car?.meLiked && car?.meLiked[0]?.myFavorite ? (
-									<FavoriteIcon style={{ color: 'red' }} />
-								) : (
-									<FavoriteIcon style={{ color: 'white' }} />
-								)}
-							</IconButton>
-							<Typography className="view-cnt">{car?.carLikes}</Typography>
-						</div>
-					</div>
+					<p className={'desc'}>${car?.carPrice}</p>
 				</div>
 			</div>
 		);

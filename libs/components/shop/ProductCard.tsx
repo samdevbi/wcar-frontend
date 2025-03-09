@@ -59,7 +59,7 @@ const ProductCard = (props: PropertyCardType) => {
 						</Stack>
 						<Stack className="address">
 							<Typography>
-								{product?.productShortDesc}
+								{product?.productType}
 							</Typography>
 						</Stack>
 					</Stack>
