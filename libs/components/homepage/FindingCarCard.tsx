@@ -46,34 +46,6 @@ const FindingCarCard = (props: FinndingCarCardProps) => {
 						pushDetailhandler(car?._id);
 					}}
 				>
-					{mySaved ? (
-						<BookmarkIcon
-							onClick={(e: any) => {
-								e.stopPropagation();
-								saveCarHandler(user, car?._id)
-							}}
-							color="secondary"
-							style={{ paddingTop: "10px", marginLeft: "10px" }} />
-
-					) : car?.meSaved && car?.meSaved?.[0]?.mySaved ? (
-
-						<BookmarkIcon
-							onClick={(e: any) => {
-								e.stopPropagation();
-								saveCarHandler(user, car?._id)
-							}}
-							color="secondary"
-							style={{ marginTop: "10px", marginLeft: "10px" }} />
-
-					) : (
-						<BookmarkBorderIcon
-							onClick={(e: any) => {
-								e.stopPropagation();
-								saveCarHandler(user, car?._id)
-							}}
-							style={{ color: 'white', marginTop: "10px", marginLeft: "10px" }}
-						/>
-					)}
 				</Box>
 				<Box component={'div'} className={'info'}>
 					<strong className={'title'}

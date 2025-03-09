@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stack, Box } from '@mui/material';
+import { Stack, Box, Typography } from '@mui/material';
 import useDeviceDetect from '../../hooks/useDeviceDetect';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper';
@@ -17,6 +17,8 @@ import { Product } from '../../types/product/product';
 import ProductCard from '../shop/ProductCard';
 import { t } from 'i18next';
 import { useTranslation } from 'next-i18next';
+import { formatterStr } from '../../utils';
+import { REACT_APP_API_URL } from '../../config';
 
 interface PopularProductsProps {
 	initialInput: ProductsInquiry;
@@ -44,6 +46,7 @@ const PopularCars = (props: PopularProductsProps) => {
 	});
 	/** HANDLERS **/
 
+	const main = popularProducts?.[1];
 	if (!popularProducts) return null;
 
 	if (device === 'mobile') {
@@ -61,6 +64,62 @@ const PopularCars = (props: PopularProductsProps) => {
 								<img src="/img/icons/rightup.svg" alt="" />
 							</div>
 						</Box>
+					</Stack>
+					<Stack className={'main-product'}>
+						<Stack className="shop-card">
+							<Stack className="top">
+								<Link
+									href={{
+										pathname: '/shop/detail',
+										query: { id: main?._id },
+									}}
+								>
+									<img src={`${REACT_APP_API_URL}/${main?.productImages?.[0]}`} alt="" />
+								</Link>
+							</Stack>
+							<Stack className="bottom">
+								<Stack className="name-address">
+									<Stack className="name">
+										<Link
+											href={{
+												pathname: '/shop/detail',
+												query: { id: main?._id },
+											}}
+										>
+											<Typography>{main?.productTitle}</Typography>
+										</Link>
+									</Stack>
+									<Stack className="desc">
+										<Typography>
+											{main?.productShortDesc}
+										</Typography>
+									</Stack>
+									<Stack className="address">
+										<Typography>
+											Category: {main?.productType}
+										</Typography>
+									</Stack>
+									<Stack className="address">
+										<Typography>
+											${main?.productPrice}
+										</Typography>
+									</Stack>
+								</Stack>
+								{/* <Stack className="divider"></Stack> */}
+								<Stack className="type-buttons">
+									<Stack className="type">
+										<Link
+											className={'p'}
+											href={{
+												pathname: '/shop/detail',
+												query: { id: main?._id },
+											}}>
+											{t('View Detail')}
+										</Link>
+									</Stack>
+								</Stack>
+							</Stack>
+						</Stack>
 					</Stack>
 					<Stack className={'card-box'}>
 						{popularProducts.map((product: Product) => {
