@@ -370,28 +370,19 @@
 									flex-direction: row;
 									justify-content: center;
 									align-items: center;
+									background: #405FF2;
 									border: 1px solid #405FF2;
 									border-radius: 0.5rem;
 									transition: transform 1s;
 
 									&:hover {
 										transform: scale(1.05);
-										background: #405FF2;
-										border: 1px solid #405FF2;
 										border-radius: 0.5rem;
-
-										.p {
-											color: #fff;
-										}
-
-										.icon {
-											color: #fff;
-										}
 									}
 
 									.p {
 										margin-left: 5px;
-										color: #405FF2;
+										color: #fff;
 										font-family: $font;
 										font-size: 15px;
 										font-style: normal;
@@ -401,7 +392,7 @@
 									.icon {
 										width: 15px;
 										height: 15px;
-										color: #405FF2;
+										color: #fff;
 										margin-bottom: 2px;
 									}
 
@@ -590,10 +581,12 @@
 
 			.title {
 				width: 600px;
-				height: 40px;
+				height: 50px;
 				margin-top: 100px;
 				margin-bottom: 20px;
-				color: #1D2671;
+				background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+				-webkit-background-clip: text;
+				color: transparent;
 				font-family: $font;
 				font-size: 40px;
 				font-style: normal;
@@ -690,149 +683,109 @@
 					align-items: center;
 					justify-content: space-between;
 
-					.switch-btn {
-						width: 50px;
-						height: 40px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						border-radius: 1rem;
-						background: #050B20;
-						filter: drop-shadow(0px 10px 35px rgba(5, 16, 54, 0.1));
-						cursor: pointer;
-
-						svg {
-							width: 14px;
-							height: 14px;
-						}
-
-						&.swiper-agents-next {
-							transform: rotate(180deg);
-						}
-					}
-
 					.card-wrapper {
-						width: 1150px;
-						height: 280px;
+						width: 100%;
+						height: 500px;
 						display: flex;
 						flex-direction: row;
+						justify-content: space-between;
+						align-items: center;
 
-						.top-agents-swiper {
-							width: 99.7%;
+						.top-agent-card {
+							width: 250px;
 							height: 500px;
 							display: flex;
-							flex-direction: row;
+							flex-direction: column;
+							border-radius: 1rem;
 
-							.top-agents-slide {
-								width: auto;
-								height: auto;
+							div {
+								position: relative;
 								display: flex;
+								justify-content: center;
+								align-items: center;
+								width: 250px;
 
-								.top-agent-card {
-									width: 250px;
-									height: 400px;
+
+
+								.email {
+									width: 235px;
+									height: 25px;
+									position: absolute;
 									display: flex;
-									flex-direction: column;
+									justify-content: center;
+									align-items: center;
+									bottom: 90px;
+									left: 3px;
+									font-size: 14px;
 									border-radius: 1rem;
-									transition: transform 2s;
+									background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+									color: black;
+									box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									text-wrap: nowrap;
+								}
 
-									&:hover {
+								.phone {
+									width: 180px;
+									height: 25px;
+									position: absolute;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									bottom: 60px;
+									left: 10px;
+									background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+									border-radius: 1rem;
+									box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+									color: black;
+								}
 
-										div {
-
-											.email {
-												opacity: 1;
-												background-color: #007bff;
-											}
-
-											.phone {
-												opacity: 1;
-											}
-
-										}
-									}
-
-									div {
-										position: relative;
-										display: flex;
-										justify-content: center;
-										align-items: center;
-										width: 200px;
-
-
-
-										.email {
-											opacity: 0;
-											width: 180px;
-											height: 20px;
-											position: absolute;
-											display: flex;
-											justify-content: center;
-											align-items: center;
-											bottom: 60px;
-											left: 10px;
-											font-size: 11px;
-											border-radius: 1rem;
-											color: white;
-											overflow: hidden;
-											text-overflow: ellipsis;
-											text-wrap: nowrap;
-										}
-
-										.phone {
-											opacity: 0;
-											width: 140px;
-											height: 25px;
-											position: absolute;
-											display: flex;
-											justify-content: center;
-											align-items: center;
-											bottom: 30px;
-											left: 10px;
-											background-color: #007bff;
-											border-radius: 1rem;
-											color: white;
-										}
-
-										img {
-											width: 250px;
-											height: 330px;
-											border-radius: 1rem;
-											cursor: pointer;
-											object-fit: cover;
-										}
-									}
-
-									strong {
-										width: 230px;
-										margin-top: 10px;
-										margin-left: 10px;
-										text-align: start;
-										font-family: $font;
-										font-size: 15px;
-										font-style: normal;
-										font-weight: 600;
-										line-height: normal;
-										text-transform: capitalize;
-										cursor: pointer;
-										white-space: nowrap;
-										overflow: hidden;
-										text-overflow: ellipsis;
-									}
-
-									span {
-										margin-left: 10px;
-										color: #181a20;
-										text-align: start;
-										font-family: $font;
-										font-size: 15px;
-										font-style: normal;
-										font-weight: 400;
-										line-height: 28px;
-									}
+								img {
+									width: 250px;
+									height: 330px;
+									margin-bottom: 50px;
+									border-radius: 1rem;
+									cursor: pointer;
+									object-fit: cover;
+									box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 								}
 							}
+
+							strong {
+								width: 230px;
+								margin-top: 10px;
+								margin-left: 10px;
+								text-align: start;
+								font-family: $font;
+								font-size: 15px;
+								font-style: normal;
+								font-weight: 600;
+								line-height: normal;
+								background-image: linear-gradient(to left, #f43b47 0%, #453a94 100%);
+								-webkit-background-clip: text;
+								color: transparent;
+								text-transform: capitalize;
+								cursor: pointer;
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+							}
+
+							span {
+								margin-left: 10px;
+								background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+								-webkit-background-clip: text;
+								color: transparent;
+								text-align: start;
+								font-family: $font;
+								font-size: 20px;
+								font-style: normal;
+								font-weight: 600;
+								line-height: 28px;
+							}
 						}
+
 					}
 				}
 			}
@@ -849,6 +802,20 @@
 			.container {
 				margin-top: 100px;
 				flex-direction: column;
+
+				.left {
+					span {
+						background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+						-webkit-background-clip: text;
+						color: transparent;
+					}
+
+					p {
+						background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+						-webkit-background-clip: text;
+						color: transparent;
+					}
+				}
 
 				.right {
 					margin-top: 20px;
@@ -870,36 +837,25 @@
 					position: relative;
 					display: flex;
 					flex-direction: row;
-
-					.top-property-swiper {
-						width: 100%;
-						height: 400px;
-						display: flex;
-						flex-direction: row;
-
-						.top-property-slide {
-							width: auto;
-							height: auto;
-							display: flex;
-							margin: 10px 0 0 10px;
-						}
-					}
+					justify-content: space-between;
+					align-items: center;
+					gap: 10px;
 
 					.post-card-box {
+						width: 320px;
 						height: 300px;
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
 						align-items: flex-start;
-						background: #6e7f80;
-						border-radius: 0.5rem;
-						box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+						border-radius: 0.1rem;
 						padding: 20px;
 						margin-top: 20px;
+						box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
 						cursor: pointer;
 
 						.top {
-							width: 280px;
+							width: 320px;
 							display: flex;
 							justify-content: space-between;
 							align-items: center;
@@ -907,10 +863,12 @@
 							text-wrap: nowrap;
 
 							.title {
-								width: 280px;
+								width: 320px;
 								font-size: 24px;
 								font-weight: 600;
-								color: #e3e8cf;
+								background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+								-webkit-background-clip: text;
+								color: transparent;
 								overflow: hidden;
 								text-overflow: ellipsis;
 							}
@@ -925,21 +883,23 @@
 							margin-bottom: 16px;
 
 							.desc {
-								width: 300px;
+								width: 250px;
 								height: 155px;
 								font-size: 16px;
 								line-height: 1.6;
-								color: #fff;
+								background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
+								-webkit-background-clip: text;
+								color: transparent;
 								overflow: hidden;
 								font-family: $font;
-								font-size: 13px;
+								font-size: 15px;
 								font-style: normal;
 								font-weight: 400;
 								line-height: normal;
 								text-align: start;
 								overflow: hidden;
 								display: -webkit-box;
-								-webkit-line-clamp: 8;
+								-webkit-line-clamp: 7;
 								-webkit-box-orient: vertical;
 								word-wrap: break-word;
 								text-overflow: ellipsis;
@@ -950,6 +910,15 @@
 						.member {
 							display: flex;
 							align-items: center;
+
+							.likes {
+								background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+								-webkit-background-clip: text;
+								color: transparent;
+								margin-top: 3px;
+								font-size: 20px;
+								font-weight: 400;
+							}
 
 							.member-img {
 								width: 48px;
@@ -967,22 +936,17 @@
 							}
 
 							.info {
+								margin-right: 20px;
+
 								.name {
 									width: 150px;
 									font-size: 18px;
 									font-weight: 700;
-									color: #000;
+									background-image: linear-gradient(to left, #09203f 0%, #537895 100%);
+									-webkit-background-clip: text;
+									color: transparent;
 									display: block;
 									letter-spacing: 1px;
-									white-space: nowrap;
-									overflow: hidden;
-									text-overflow: ellipsis;
-								}
-
-								.member-address {
-									width: 200px;
-									font-size: 14px;
-									color: #000;
 									white-space: nowrap;
 									overflow: hidden;
 									text-overflow: ellipsis;

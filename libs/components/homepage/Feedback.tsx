@@ -97,8 +97,8 @@ const Feedback = () => {
                 <Stack className={'container'}>
                     <Stack className={'info-box'}>
                         <Box component={'div'} className={'left'}>
-                            <span style={{ color: 'black', marginTop: '20px' }}>{t('What Our Customers say')}</span>
-                            <p style={{ color: 'black', marginTop: '20px' }}>"{t('We value our customers and their opinions matter to us. Your feedback helps us grow and improve every day!')}"</p>
+                            <span style={{ marginTop: '20px' }}>{t('What Our Customers say')}</span>
+                            <p style={{ marginTop: '20px' }}>"{t('We value our customers and their opinions matter to us. Your feedback helps us grow and improve every day!')}"</p>
                         </Box>
                         <Box component={'div'} className={'right'}>
                             <div className={'more-box'}>
@@ -110,35 +110,12 @@ const Feedback = () => {
                         </Box>
                     </Stack>
                     <Stack className={'card-box'}>
-                        <Swiper
-                            className={'top-property-swiper'}
-                            slidesPerView={'auto'}
-                            spaceBetween={15}
-                            modules={[Autoplay, Navigation, Pagination]}
-                            navigation={{
-                                nextEl: '.swiper-top-next',
-                                prevEl: '.swiper-top-prev',
-                            }}
-                            pagination={{
-                                el: '.swiper-top-pagination',
-                            }}
-                        >
-                            {topArticle.map((article: Article) => {
-                                return (
-                                    <SwiperSlide className={'top-property-slide'} key={article?._id}>
-                                        <FeedbackCard article={article} likeArticleHandler={likeArticleHandler} />
-                                    </SwiperSlide>
-                                );
-                            })}
-                        </Swiper>
+                        {topArticle.map((article: Article) => {
+                            return (
+                                <FeedbackCard article={article} likeArticleHandler={likeArticleHandler} />
+                            );
+                        })}
                     </Stack>
-                    <Box component={'div'} className={'right'}>
-                        <div className={'pagination-box'}>
-                            <ArrowBackIosNewIcon className={'swiper-top-prev'} />
-                            <div className={'swiper-top-pagination'}></div>
-                            <ArrowForwardIosIcon className={'swiper-top-next'} />
-                        </div>
-                    </Box>
                 </Stack>
             </Stack>
         );

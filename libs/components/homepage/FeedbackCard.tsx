@@ -64,11 +64,6 @@ const FeedbackCard = (props: TopArticleCardProps) => {
                     </div>
                     <div className={'info'}>
                         <span className={'name'}>{article?.creatorData?.titleNick}</span>
-                        <p className={'member-address'}>{article?.creatorData?.address}</p>
-                    </div>
-                    <ChatBubbleOutlineIcon style={{ color: '#ffce69', marginTop: '5px', marginRight: '3px' }} />
-                    <div style={{ marginRight: '10px' }}>
-                        {article?.articleComments}
                     </div>
                     {myLiked ? (
                         <StarRateIcon
@@ -87,7 +82,7 @@ const FeedbackCard = (props: TopArticleCardProps) => {
                                 e.stopPropagation();
                                 likeArticleHandler(user, article?._id, article?.creatorData?._id)
                             }}
-                            style={{ color: '#ffce69' }} />
+                            style={{ color: '#fcb045' }} />
 
                     ) : (
                         <StarBorderIcon
@@ -96,9 +91,12 @@ const FeedbackCard = (props: TopArticleCardProps) => {
                                 e.stopPropagation();
                                 likeArticleHandler(user, article?._id, article?.creatorData?._id)
                             }}
-                            style={{ color: '#f19b5f' }}
+                            style={{ color: '#fcb045' }}
                         />
                     )}
+                    <p className={'likes'} style={{ marginLeft: '5px' }}>
+                        {article?.articleLikes}
+                    </p>
                 </div>
             </Stack>
         );

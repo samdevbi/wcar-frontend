@@ -842,7 +842,7 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    background: #181a20;
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 
     .footer-container {
       padding: 0 10px;
