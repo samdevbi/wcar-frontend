@@ -1,6 +1,6 @@
 import React, { ChangeEvent, MouseEvent, useEffect, useState } from 'react';
 import { NextPage } from 'next';
-import { Box, Button, Menu, MenuItem, Pagination, Stack, Typography } from '@mui/material';
+import { Box, Button, Divider, FormControl, Menu, MenuItem, Modal, Pagination, Select, Stack, Typography } from '@mui/material';
 import useDeviceDetect from '../../libs/hooks/useDeviceDetect';
 import withLayoutBasic from '../../libs/components/layout/LayoutBasic';
 import Filter from '../../libs/components/car/Filter';
@@ -17,6 +17,8 @@ import { CarsInquiry } from '../../libs/types/car/car.input';
 import MainCarCard from '../../libs/components/car/MainCarCard';
 import { CREATE_NOTIFICATION, LIKE_CAR, SAVE_CAR } from '../../apollo/user/mutation';
 import { useTranslation } from 'next-i18next';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CloseIcon from '@mui/icons-material/Close';
 
 export const getStaticProps = async ({ locale }: any) => ({
     props: {
@@ -37,6 +39,12 @@ const CarList: NextPage = ({ initialInput, ...props }: any) => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [sortingOpen, setSortingOpen] = useState(false);
     const [filterSortName, setFilterSortName] = useState('New');
+    const [openAdvancedFilter, setOpenAdvancedFilter] = useState(false);
+    const [openLocation, setOpenLocation] = useState(false);
+    const [openType, setOpenType] = useState(false);
+    const [openRooms, setOpenRooms] = useState(false);
+    const [optionCheck, setOptionCheck] = useState('all');
+
 
     /** APOLLO REQUESTS **/
     const [likeTargetCar] = useMutation(LIKE_CAR);
@@ -154,6 +162,39 @@ const CarList: NextPage = ({ initialInput, ...props }: any) => {
         setAnchorEl(null);
     };
 
+    /** HANDLERS **/
+    const advancedFilterHandler = (status: boolean) => {
+        setOpenLocation(false);
+        setOpenRooms(false);
+        setOpenType(false);
+        setOpenAdvancedFilter(status);
+    };
+
+    const locationStateChangeHandler = () => {
+        setOpenLocation((prev) => !prev);
+        setOpenRooms(false);
+        setOpenType(false);
+    };
+
+    const typeStateChangeHandler = () => {
+        setOpenType((prev) => !prev);
+        setOpenLocation(false);
+        setOpenRooms(false);
+    };
+
+    const roomStateChangeHandler = () => {
+        setOpenRooms((prev) => !prev);
+        setOpenType(false);
+        setOpenLocation(false);
+    };
+
+    const disableAllStateHandler = () => {
+        setOpenRooms(false);
+        setOpenType(false);
+        setOpenLocation(false);
+    };
+
+
     if (device === 'mobile') {
         return <h1>CARS MOBILE</h1>;
     } else {
@@ -236,7 +277,7 @@ const CarList: NextPage = ({ initialInput, ...props }: any) => {
                         </Stack>
                     </Stack>
                 </div>
-            </div>
+            </div >
         );
     }
 };

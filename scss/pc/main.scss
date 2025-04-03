@@ -410,11 +410,6 @@ body::-webkit-scrollbar {
 	.header-basic {
 		position: relative;
 		width: 100%;
-		height: 557px;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		background: black;
 
 		&.auth {
 			height: 300px;
@@ -424,7 +419,9 @@ body::-webkit-scrollbar {
 			margin-top: 175px;
 
 			strong {
-				color: #fff;
+				background: linear-gradient(to right, #870000, #190A05);
+				-webkit-background-clip: text;
+				color: transparent;
 				font-family: $font;
 				font-size: 48px;
 				font-style: normal;
@@ -435,7 +432,9 @@ body::-webkit-scrollbar {
 			}
 
 			span {
-				color: #fff;
+				background: linear-gradient(to right, #870000, #190A05);
+				-webkit-background-clip: text;
+				color: transparent;
 				font-family: $font;
 				font-size: 24px;
 				font-style: normal;
