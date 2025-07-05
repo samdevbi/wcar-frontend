@@ -185,15 +185,12 @@ const Top = () => {
 					<Stack className={'container'}>
 						<Box component={'div'} className={'logo-box'}>
 							<Link href={'/'}>
-								<p>WCar</p>
+								<p>Car Sale On</p>
 							</Link>
 						</Box>
 						<Box component={'div'} className={'router-box'}>
 							<Link href={'/cars'}>
 								<div>{t('Cars')}</div>
-							</Link>
-							<Link href={'/agent'}>
-								<div> {t('Agents')} </div>
 							</Link>
 							<Link href={'/dealers'}>
 								<div>{t('Dealers')}</div>
@@ -201,11 +198,11 @@ const Top = () => {
 							<Link href={'/shop'}>
 								<div>{t('Shop')}</div>
 							</Link>
-							<Link href={'/service'}>
-								<div>{t('Service')}</div>
+							<Link href={'/agent'}>
+								<div> {t('Team')} </div>
 							</Link>
 							<Link href={'/community?articleCategory=FREE'}>
-								<div> {t('Community')} </div>
+								<div> {t('News')} </div>
 							</Link>
 							<Link href={'/cs'}>
 								<div> {t('CS')} </div>
@@ -252,7 +249,7 @@ const Top = () => {
 									<div className={'join-box'}>
 										<AccountCircleOutlinedIcon />
 										<span>
-											{t('Register')}
+											{t('Join Us')}
 										</span>
 									</div>
 								</Link>

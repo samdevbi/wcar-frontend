@@ -14,8 +14,8 @@ const LayoutFilter = (props: any) => {
             <>
                 <Stack className={'first-box'}>
                     <Stack className={'text'}>
-                        <div className={'small-text'}>{t('We make finding the right car simple')}</div>
                         <div className={'big-text'}>{t('Search Less. Watch More')}</div>
+                        <div className={'small-text'}>{t('We make finding the right car simple')}</div>
                     </Stack>
                 </Stack>
             </>

@@ -13,6 +13,9 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import EditCalendarIcon from '@mui/icons-material/EditCalendar';
 import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
 import AirlineSeatReclineExtraIcon from '@mui/icons-material/AirlineSeatReclineExtra';
+import LanguageIcon from '@mui/icons-material/Language';
+import SpeedIcon from '@mui/icons-material/Speed';
+import PinDropIcon from '@mui/icons-material/PinDrop';
 
 interface RecommendedCarCardProps {
 	car: any;
@@ -49,14 +52,14 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 							<Typography>TOP</Typography>
 						</Stack>
 					)}
-					{mySaved ? (
+					{/* {mySaved ? (
 						<BookmarkIcon
 							onClick={(e: any) => {
 								e.stopPropagation();
 								saveCarHandler(user, car?._id)
 							}}
 							color="secondary"
-							style={{ paddingTop: "10px", marginLeft: "10px" }} />
+							style={{ paddingTop: "40px", marginRight: "40px" }} />
 
 					) : car?.meSaved && car?.meSaved?.[0]?.mySaved ? (
 
@@ -66,7 +69,7 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 								saveCarHandler(user, car?._id)
 							}}
 							color="secondary"
-							style={{ paddingTop: "10px", marginLeft: "10px" }} />
+							style={{ paddingTop: "40px", marginRight: "40px" }} />
 
 					) : (
 						<BookmarkBorderIcon
@@ -74,9 +77,9 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 								e.stopPropagation();
 								saveCarHandler(user, car?._id)
 							}}
-							style={{ color: 'white', paddingTop: "10px", marginLeft: "10px" }}
+							style={{ color: 'white', paddingTop: "40px", marginRight: "40px" }}
 						/>
-					)}
+					)} */}
 				</div>
 				<div className={'info'}>
 					<strong className={'title'}
@@ -85,22 +88,36 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 						}}>
 						{car?.carTitle}
 					</strong>
-					<Divider className={'divider-recom'} sx={{ mt: '2px', mb: '1px' }} />
 					<div className={'options'}>
 						<div>
 							<EditCalendarIcon className={'img'} />
-							<span>: {car?.carYear}</span>
+							<span>{car?.carYear}</span>
 						</div>
 						<div>
 							<LocalGasStationIcon className={'img'} />
-							<span>: {car?.carFuelType}</span>
+							<span>{car?.carFuelType}</span>
 						</div>
 						<div>
 							<AirlineSeatReclineExtraIcon className={'img'} />
-							<span>: {car?.carDriveType}</span>
+							<span>{car?.carDriveType}</span>
 						</div>
 					</div>
-					<p className={'desc'}>${car?.carPrice}</p>
+					<div className={'options'}>
+						<div>
+							<LanguageIcon className={'img'} />
+							<span>{car?.carMadeIn}</span>
+						</div>
+						<div>
+							<SpeedIcon className={'img'} />
+							<span>{car?.carMileage} miles</span>
+						</div>
+						<div>
+							<PinDropIcon className={'img'} />
+							<span>{car?.carLocation}</span>
+						</div>
+					</div>
+					<Divider className={'divider-recom'} sx={{ mt: '20px', mb: '10px' }} />
+					<p className={'desc'}><span style={{ fontWeight: '500', color: '#2F313A' }}>Price:</span> ${car?.carPrice}</p>
 				</div>
 			</div>
 		);
