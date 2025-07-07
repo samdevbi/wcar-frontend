@@ -52,7 +52,7 @@ const FindingCarCard = (props: FinndingCarCardProps) => {
 						onClick={() => {
 							pushDetailhandler(car?._id);
 						}}>{car?.carTitle}</strong>
-					<p className={'desc'}>By {car?.creatorData?.type} - {car?.creatorData?.titleNick}</p>
+					<p className={'desc'}>{car?.creatorData?.type} - {car?.creatorData?.titleNick}</p>
 					<Divider sx={{ mt: '2px', mb: '2px' }} />
 					<div className={'options'}>
 						<div>

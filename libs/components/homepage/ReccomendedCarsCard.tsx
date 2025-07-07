@@ -88,6 +88,7 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 						}}>
 						{car?.carTitle}
 					</strong>
+					<Divider className={'divider-recom'} sx={{ mt: '20px' }} />
 					<div className={'options'}>
 						<div>
 							<EditCalendarIcon className={'img'} />
@@ -102,6 +103,7 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 							<span>{car?.carDriveType}</span>
 						</div>
 					</div>
+					<Divider className={'divider-recom'} />
 					<div className={'options'}>
 						<div>
 							<LanguageIcon className={'img'} />
@@ -116,7 +118,7 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 							<span>{car?.carLocation}</span>
 						</div>
 					</div>
-					<Divider className={'divider-recom'} sx={{ mt: '20px', mb: '10px' }} />
+					<Divider className={'divider-recom'} sx={{ mb: '10px' }} />
 					<p className={'desc'}><span style={{ fontWeight: '500', color: '#2F313A' }}>Price:</span> ${car?.carPrice}</p>
 				</div>
 			</div>

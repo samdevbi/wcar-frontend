@@ -199,85 +199,57 @@
 	margin-left: 15px;
 	display: flex;
 	flex-direction: column;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	border-radius: 2rem;
+	transition: 3s;
+
+	&:hover {
+		opacity: 1;
+		transform: scale(1.05);
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	}
 
 	.card-img {
 		position: relative;
 		width: 100%;
 		height: 250px;
 		background-size: cover;
-		border-radius: 0.1rem;
 		background-position: center;
 		background-size: cover;
+		border-radius: 2rem 2rem 0 0;
 		cursor: pointer;
-		border-radius: 0.2rem;
-		transition: transform 0.3s;
-		box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-
-		&:hover {
-			opacity: 1;
-			transform: scale(1.05);
-			box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-		}
-
-		div {
-			width: 24px;
-			height: 24px;
-			position: absolute;
-			padding: 8px 12px;
-			left: 12px;
-			bottom: 12px;
-			border-radius: 2rem;
-			color: #181a20;
-			font-family: $font;
-			font-size: 15px;
-			font-style: normal;
-			font-weight: 600;
-			line-height: normal;
-		}
 	}
 
 	.info {
-		padding: 10px;
-		margin-top: 10px;
-		height: 160px;
+		width: auto;
+		padding: 20px;
+		height: 200px;
 		display: flex;
 		flex-direction: column;
-		box-sizing: border-box;
-		border-top: none;
-		background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-		border-radius: 0.3rem;
+		border-radius: 0 0 2rem 2rem;
+		background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 
 
 		.title {
-			overflow: hidden;
-			background-image: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c);
-			-webkit-background-clip: text;
-			color: transparent;
-			text-overflow: ellipsis;
-			white-space: nowrap;
+			color: #2F313A;
 			font-family: $font;
-			font-size: 20px;
+			font-size: 24px;
 			font-style: normal;
 			font-weight: 700;
-			line-height: normal;
-			text-transform: capitalize;
 			cursor: pointer;
 		}
 
 		.desc {
-			margin-top: 5px;
 			overflow: hidden;
-			background-image: linear-gradient(to left, #fdbb2d, #b21f1f, #1a2a6c);
-			-webkit-background-clip: text;
-			color: transparent;
+			text-wrap: nowrap;
+			text-overflow: ellipsis;
+			margin-top: 5px;
+			color: #2F313A;
 			font-family: $font;
 			font-size: 17px;
 			font-style: normal;
-			font-weight: 600;
+			font-weight: 300;
 			line-height: normal;
-			text-overflow: ellipsis;
-			white-space: nowrap;
 		}
 
 		.options {
@@ -292,13 +264,11 @@
 				align-items: center;
 
 				span {
-					background-image: linear-gradient(to left, #3a6186, #b21f1f, #89253e);
-					-webkit-background-clip: text;
-					color: transparent;
+					color: #2F313A;
 					font-family: $font;
-					font-size: 14px;
+					font-size: 16px;
 					font-style: normal;
-					font-weight: 400;
+					font-weight: 600;
 					line-height: normal;
 				}
 			}
@@ -307,24 +277,21 @@
 		.bott {
 			display: flex;
 			flex-direction: row;
-			justify-content: flex-start;
+			justify-content: space-between;
 			align-items: center;
 
 			p {
-				background-image: linear-gradient(to left, #3a6186, #b21f1f, #89253e);
-				-webkit-background-clip: text;
-				color: transparent;
+				color: #2F313A;
 				font-family: $font;
-				font-size: 20px;
+				font-size: 30px;
 				font-style: normal;
-				font-weight: 600;
+				font-weight: 700;
 				line-height: normal;
 				text-transform: capitalize;
 				letter-spacing: 1px;
 			}
 
 			.view-like-box {
-				margin-left: 180px;
 				display: flex;
 				flex-direction: row;
 				gap: 7px;
@@ -439,9 +406,11 @@
 		}
 
 		.options {
-			margin-top: 20px;
+			gap: 10px;
 			display: flex;
 			flex-direction: row;
+			margin-top: 10px;
+			margin-bottom: 10px;
 
 			div {
 				width: 180px;
