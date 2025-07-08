@@ -355,7 +355,7 @@
 
 								.type {
 									width: 400px;
-									height: 40px;
+									height: 50px;
 									align-items: center;
 									justify-content: center;
 									background: #405FF2;
@@ -543,10 +543,45 @@
 
 		.video-frame {
 			width: 100%;
-			height: 678px;
+			height: 700px;
+			margin-bottom: 100px;
 			background: #050B20;
 			transform: perspective(0px);
 			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+			p {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: $font;
+				font-size: 60px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: normal;
+				text-align: start;
+				color: #eeeeeeed;
+				background: #00000091;
+			}
+
+			span {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				margin-top: 80px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: $font;
+				font-size: 60px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				text-align: start;
+				color: #eeeeeeed;
+			}
 		}
 
 		.search-body {
@@ -647,7 +682,6 @@
 			position: relative;
 			padding: 153px 0px 135px;
 			width: 100%;
-			height: 722px;
 			display: flex;
 			flex-direction: row;
 
@@ -656,13 +690,38 @@
 				flex-direction: column;
 				align-items: center;
 
+				.more-box {
+					width: 1300px;
+					margin-bottom: 50px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					span {
+						font-size: 80px;
+						font-weight: 600;
+						color: #050B20;
+						font-weight: bolder;
+					}
+
+					p {
+						font-size: 22px;
+						font-weight: 400;
+						background-image: linear-gradient(to top, #050B20 0%, #537895 100%);
+						-webkit-background-clip: text;
+						color: transparent;
+					}
+				}
+
 				.wrapper {
 					width: 100%;
-					margin-top: 83px;
 					display: flex;
 					flex-direction: row;
 					align-items: center;
 					justify-content: space-between;
+					border: 1px solid #767a9d61;
+					padding: 20px;
+					border-radius: 2rem;
 
 					.card-wrapper {
 						width: 100%;
@@ -673,97 +732,63 @@
 						align-items: center;
 
 						.top-agent-card {
-							width: 250px;
-							height: 500px;
+							width: 240px;
+							height: 400px;
 							display: flex;
 							flex-direction: column;
-							border-radius: 1rem;
+							border-radius: 2rem;
+							box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
 							div {
 								position: relative;
 								display: flex;
 								justify-content: center;
 								align-items: center;
-								width: 250px;
+								width: 240px;
+								height: 400px;
 
 
 
 								.email {
+									z-index: 11;
 									width: 235px;
 									height: 25px;
 									position: absolute;
-									display: flex;
-									justify-content: center;
-									align-items: center;
-									bottom: 90px;
-									left: 3px;
-									font-size: 14px;
-									border-radius: 1rem;
-									background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-									color: black;
-									box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-									overflow: hidden;
-									text-overflow: ellipsis;
-									text-wrap: nowrap;
+									bottom: 50px;
+									font-size: 24px;
+									font-weight: 600;
+									color: #fff;
+									text-wrap: wrap;
 								}
 
 								.phone {
+									z-index: 11;
 									width: 180px;
 									height: 25px;
 									position: absolute;
-									display: flex;
-									justify-content: center;
-									align-items: center;
-									bottom: 60px;
-									left: 10px;
-									background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-									border-radius: 1rem;
-									box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-									color: black;
+									font-size: 20px;
+									font-weight: 400;
+									bottom: 20px;
+									color: #fff;
 								}
 
 								img {
-									width: 250px;
-									height: 330px;
-									margin-bottom: 50px;
-									border-radius: 1rem;
+									width: 240px;
+									height: 400px;
+									border-radius: 2rem;
 									cursor: pointer;
 									object-fit: cover;
-									box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+									background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 60%);
 								}
-							}
 
-							strong {
-								width: 230px;
-								margin-top: 10px;
-								margin-left: 10px;
-								text-align: start;
-								font-family: $font;
-								font-size: 15px;
-								font-style: normal;
-								font-weight: 600;
-								line-height: normal;
-								background-image: linear-gradient(to left, #f43b47 0%, #453a94 100%);
-								-webkit-background-clip: text;
-								color: transparent;
-								text-transform: capitalize;
-								cursor: pointer;
-								white-space: nowrap;
-								overflow: hidden;
-								text-overflow: ellipsis;
-							}
-
-							span {
-								margin-left: 10px;
-								background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
-								-webkit-background-clip: text;
-								color: transparent;
-								text-align: start;
-								font-family: $font;
-								font-size: 20px;
-								font-style: normal;
-								font-weight: 600;
-								line-height: 28px;
+								.fade {
+									z-index: 10;
+									position: absolute;
+									border-radius: 2rem;
+									background: linear-gradient(to top,
+											#ff0844 0%,
+											rgba(255, 255, 255, 0) 50%);
+								}
 							}
 						}
 
@@ -775,42 +800,37 @@
 		.top-cars {
 			padding: 10px 0px 76px;
 			width: 100%;
-			height: 680px;
-			margin-bottom: 20px;
+			height: auto;
+			margin-bottom: 200px;
 			display: flex;
 			flex-direction: row;
 
 			.container {
+				width: 1300px;
 				margin-top: 100px;
 				flex-direction: column;
 
-				.left {
+				.info-box {
+					margin-bottom: 50px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
 					span {
+						font-size: 80px;
+						font-weight: bolder;
 						background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 						-webkit-background-clip: text;
 						color: transparent;
 					}
 
 					p {
+						font-size: 22px;
+						font-weight: 400;
 						background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 						-webkit-background-clip: text;
 						color: transparent;
-					}
-				}
-
-				.right {
-					margin-top: 20px;
-					display: flex;
-					justify-content: flex-start;
-					align-items: center;
-
-					.pagination-box {
-						max-width: 300px;
-						height: 30px;
-						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
-						align-items: center;
 					}
 				}
 
@@ -824,7 +844,7 @@
 
 					.post-card-box {
 						width: 320px;
-						height: 300px;
+						height: 400px;
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
@@ -832,7 +852,9 @@
 						border-radius: 0.1rem;
 						padding: 20px;
 						margin-top: 20px;
-						box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+						box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+						border: 1px solid #1d257156;
+						border-radius: 2rem;
 						cursor: pointer;
 
 						.top {
@@ -841,16 +863,20 @@
 							justify-content: space-between;
 							align-items: center;
 							margin-bottom: 16px;
-							text-wrap: nowrap;
 
 							.title {
 								width: 320px;
+								height: 100px;
 								font-size: 24px;
 								font-weight: 600;
 								background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 								-webkit-background-clip: text;
 								color: transparent;
 								overflow: hidden;
+
+								display: -webkit-box;
+								-webkit-line-clamp: 3;
+								-webkit-box-orient: vertical;
 								text-overflow: ellipsis;
 							}
 
@@ -865,9 +891,7 @@
 
 							.desc {
 								width: 250px;
-								height: 155px;
-								font-size: 16px;
-								line-height: 1.6;
+								height: 130px;
 								background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
 								-webkit-background-clip: text;
 								color: transparent;
@@ -876,15 +900,14 @@
 								font-size: 15px;
 								font-style: normal;
 								font-weight: 400;
-								line-height: normal;
 								text-align: start;
-								overflow: hidden;
 								display: -webkit-box;
-								-webkit-line-clamp: 7;
+								-webkit-line-clamp: 5;
 								-webkit-box-orient: vertical;
 								word-wrap: break-word;
 								text-overflow: ellipsis;
 								cursor: pointer;
+								line-height: 1.7;
 							}
 						}
 
@@ -902,8 +925,8 @@
 							}
 
 							.member-img {
-								width: 48px;
-								height: 48px;
+								width: 60px;
+								height: 60px;
 								border-radius: 50%;
 								background: #f5f5f5;
 								margin-right: 12px;

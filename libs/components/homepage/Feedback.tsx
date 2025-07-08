@@ -96,18 +96,8 @@ const Feedback = () => {
             <Stack className={'top-cars'}>
                 <Stack className={'container'}>
                     <Stack className={'info-box'}>
-                        <Box component={'div'} className={'left'}>
-                            <span style={{ marginTop: '20px' }}>{t('What Our Customers say')}</span>
-                            <p style={{ marginTop: '20px' }}>"{t('We value our customers and their opinions matter to us. Your feedback helps us grow and improve every day!')}"</p>
-                        </Box>
-                        <Box component={'div'} className={'right'}>
-                            <div className={'more-box'}>
-                                <Link href={'/community'}>
-                                    <span style={{ color: 'black' }}>{t('See All Articles')}</span>
-                                </Link>
-                                <img src="/img/icons/rightup.svg" alt="" />
-                            </div>
-                        </Box>
+                        <span style={{ marginTop: '20px' }}>{t(' Our Customers')}</span>
+                        <p style={{ marginTop: '20px' }}>"{t('We value our customers and their opinions matter to us. Your feedback helps us grow and improve every day!')}"</p>
                     </Stack>
                     <Stack className={'card-box'}>
                         {topArticle.map((article: Article) => {

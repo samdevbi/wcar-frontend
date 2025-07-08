@@ -29,13 +29,11 @@ const TopAgentCard = (props: TopAgentProps) => {
 				onClick={() => pushDetailhandler(agent?._id)}
 			>
 				<div>
-					<div className={'email'}>{agent.email}</div>
-					<div className={'phone'}>{agent.phone}</div>
+					<div className={'email'}>{agent.titleNick}</div>
+					<div className={'phone'}>{agent.type}</div>
 					<img src={agentImage} alt="" />
+					<div className={'fade'}></div>
 				</div>
-
-				<strong>{agent?.titleNick}</strong>
-				<span>{agent?.type}</span>
 			</Stack>
 		);
 	}

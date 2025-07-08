@@ -683,7 +683,7 @@ body::-webkit-scrollbar {
 		height: auto;
 		display: flex;
 		flex-direction: row;
-		background-image: linear-gradient(-120deg, #e0c3fc 0%, #8ec5fc 100%);
+		background-color: #050B20;
 
 		.footer-container {
 			width: 1300px;
@@ -712,7 +712,7 @@ body::-webkit-scrollbar {
 						}
 
 						p {
-							color: #330867;
+							color: #fff;
 							font-family: $font;
 							font-size: 44px;
 							font-style: normal;
@@ -732,7 +732,7 @@ body::-webkit-scrollbar {
 						}
 
 						span {
-							color: #330867;
+							color: #fff;
 							font-family: $font;
 							font-size: 14px;
 							font-style: normal;
@@ -741,7 +741,7 @@ body::-webkit-scrollbar {
 						}
 
 						p {
-							color: #330867;
+							color: #fff;
 							font-family: $font;
 							font-size: 15px;
 							font-style: normal;
@@ -752,7 +752,7 @@ body::-webkit-scrollbar {
 
 						.media-box {
 							margin-top: 12px;
-							color: #330867;
+							color: #fff;
 
 							svg {
 								font-size: 32px;
@@ -772,7 +772,7 @@ body::-webkit-scrollbar {
 						flex-direction: column;
 
 						strong {
-							color: #330867;
+							color: #fff;
 							font-family: $font;
 							font-size: 15px;
 							font-style: normal;
@@ -791,14 +791,14 @@ body::-webkit-scrollbar {
 							align-items: center;
 							box-sizing: border-box;
 							border-radius: 12px;
-							background: #764ba2;
+							background: #fff;
 
 							input {
 								margin-right: 10px;
 								width: 85%;
 								border: none;
 								outline: none;
-								color: #330867;
+								color: #fff;
 								font-family: $font;
 								font-size: 14px;
 								font-style: normal;
@@ -808,7 +808,7 @@ body::-webkit-scrollbar {
 							}
 
 							span {
-								color: #330867;
+								color: #fff;
 								font-family: $font;
 								font-size: 15px;
 								font-style: normal;
@@ -831,7 +831,7 @@ body::-webkit-scrollbar {
 
 							strong {
 								margin-bottom: 3px;
-								color: #330867;
+								color: #fff;
 								font-family: $font;
 								font-size: 15px;
 								font-style: normal;
@@ -842,7 +842,7 @@ body::-webkit-scrollbar {
 
 							span {
 								margin-top: 25px;
-								color: #330867;
+								color: #fff;
 								font-family: $font;
 								font-size: 14px;
 								font-style: normal;
@@ -850,7 +850,7 @@ body::-webkit-scrollbar {
 								cursor: pointer;
 
 								&:hover {
-									color: #330867;
+									color: #fff;
 									text-decoration-line: underline;
 								}
 							}
@@ -862,14 +862,14 @@ body::-webkit-scrollbar {
 			.second {
 				margin-top: 60px;
 				height: 45px;
-				border-top: 1px solid #330867;
+				border-top: 1px solid #fff;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: flex-end;
 
 				span {
-					color: #330867;
+					color: #fff;
 					font-family: $font;
 					font-size: 14px;
 					font-style: normal;

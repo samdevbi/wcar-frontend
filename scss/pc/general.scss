@@ -1,9 +1,10 @@
 .shop-card-config {
 	width: 240px;
-	height: 400px;
+	height: auto;
 	margin-top: 50px;
 	border-radius: 2rem;
-	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	border: 1px solid #1d25714d;
 
 	.top {
 		position: relative;
@@ -17,7 +18,7 @@
 		}
 
 		img {
-			width: 240px;
+			width: 238px;
 			height: 220px;
 			object-fit: cover;
 			background: #717171;
@@ -52,7 +53,7 @@
 
 	.bottom {
 		position: relative;
-		width: 100%;
+		width: 238px;
 		height: 250px;
 		padding: 20px 16px 10px 16px;
 		box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
