@@ -52,34 +52,6 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 							<Typography>TOP</Typography>
 						</Stack>
 					)}
-					{/* {mySaved ? (
-						<BookmarkIcon
-							onClick={(e: any) => {
-								e.stopPropagation();
-								saveCarHandler(user, car?._id)
-							}}
-							color="secondary"
-							style={{ paddingTop: "40px", marginRight: "40px" }} />
-
-					) : car?.meSaved && car?.meSaved?.[0]?.mySaved ? (
-
-						<BookmarkIcon
-							onClick={(e: any) => {
-								e.stopPropagation();
-								saveCarHandler(user, car?._id)
-							}}
-							color="secondary"
-							style={{ paddingTop: "40px", marginRight: "40px" }} />
-
-					) : (
-						<BookmarkBorderIcon
-							onClick={(e: any) => {
-								e.stopPropagation();
-								saveCarHandler(user, car?._id)
-							}}
-							style={{ color: 'white', paddingTop: "40px", marginRight: "40px" }}
-						/>
-					)} */}
 				</div>
 				<div className={'info'}>
 					<strong className={'title'}
@@ -119,7 +91,7 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 						</div>
 					</div>
 					<Divider className={'divider-recom'} sx={{ mb: '10px' }} />
-					<p className={'desc'}><span style={{ fontWeight: '500', color: '#2F313A' }}>Price:</span> ${car?.carPrice}</p>
+					<p className={'desc'}><span style={{ fontWeight: '500', color: '#2F313A' }}>Price:</span> ${car?.carPrice?.toLocaleString('de-DE')}</p>
 				</div>
 			</div>
 		);

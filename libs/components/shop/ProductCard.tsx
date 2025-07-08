@@ -59,21 +59,9 @@ const ProductCard = (props: PropertyCardType) => {
 						</Stack>
 						<Stack className="address">
 							<Typography>
-								{product?.productType}
+								Category: <strong>{product?.productType}</strong>
 							</Typography>
-						</Stack>
-					</Stack>
-					<Stack className="divider"></Stack>
-					<Stack className="type-buttons">
-						<Stack className="type">
-							<Link
-								className={'p'}
-								href={{
-									pathname: '/shop/detail',
-									query: { id: product?._id },
-								}}>
-								{t('View Detail')}
-							</Link>
+							<Stack className="divider"></Stack>
 						</Stack>
 					</Stack>
 				</Stack>

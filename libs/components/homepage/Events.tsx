@@ -56,7 +56,7 @@ const Events = () => {
 				<Stack className={'container'}>
 					<Stack className={'info-box'}>
 						<Box component={'div'} className={'left'}>
-							<span className={'white'}>{t('Last news from WCar.com website')}</span>
+							<span className={'white'}>{t('Last news')}</span>
 							<p className={'white'}>{t('Events waiting your attention!')}</p>
 						</Box>
 					</Stack>
@@ -79,10 +79,7 @@ const Events = () => {
 										<strong>{article?.articleTitle}</strong>
 										<div className={'divider'} />
 										<p>{article?.articleContent?.replace(/<\/?p>/g, '')}</p>
-										<div className={'divider'} />
-										<span>By {article?.creatorData?.type}</span>
-										<span>{article?.creatorData?.titleNick}</span>
-
+										<span>{article?.creatorData?.type} - {article?.creatorData?.titleNick}</span>
 									</Box>
 								</Stack>
 							);

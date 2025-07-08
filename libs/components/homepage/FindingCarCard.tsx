@@ -71,7 +71,7 @@ const FindingCarCard = (props: FinndingCarCardProps) => {
 					<Divider sx={{ mt: '5px', mb: '5px' }} />
 					<div className={'bott'}>
 						<p>
-							${car?.carPrice}
+							${car?.carPrice?.toLocaleString('de-DE')}
 						</p>
 						<div className="view-like-box">
 							<IconButton color={'default'}>

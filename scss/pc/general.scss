@@ -1,13 +1,14 @@
 .shop-card-config {
 	width: 240px;
-	height: 330px;
-	margin-top: 20px;
-	margin-bottom: 7px;
+	height: 400px;
+	margin-top: 50px;
+	border-radius: 2rem;
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
 	.top {
 		position: relative;
 		width: 100%;
-		height: 240px;
+		height: 220px;
 		justify-content: center;
 		align-items: center;
 
@@ -17,60 +18,33 @@
 
 		img {
 			width: 240px;
-			height: 200px;
-			margin-top: 9px;
+			height: 220px;
 			object-fit: cover;
 			background: #717171;
-			border-radius: 0.2rem;
-			transition: transform 1s;
-			box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-
-			&:hover {
-				transform: scale(1.03);
-				border-radius: 0.5rem;
-				box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-			}
-		}
-
-		.top-badge {
-			position: absolute;
-			top: 30px;
-			left: 30px;
-			display: flex;
-			width: 100px;
-			height: 25px;
-			justify-content: center;
-			align-items: center;
-			border-radius: 6px;
-			padding: 6px 20px;
-			background: #405FF2;
-			color: #fff;
-			text-align: center;
-			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-			font-family: $font;
-			font-size: 12px;
-			font-style: normal;
-			font-weight: 600;
-			line-height: normal;
-
+			border-radius: 2rem 2rem 0 0;
+			transition: transform 3s;
 		}
 
 		.price-box {
+			width: 100px;
+			height: 30px;
 			position: absolute;
 			bottom: 20px;
-			left: 30px;
+			left: 16px;
 			padding: 2px 4px;
-			align-items: center;
-			border-radius: 6px;
+			border-radius: 2rem;
 			border: 1px solid rgba(255, 255, 255, 0.5);
 			background: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			p {
 				color: #181a20;
 				font-family: $font;
-				font-size: 12px;
+				font-size: 22px;
 				font-style: normal;
-				font-weight: 600;
+				font-weight: 700;
 				line-height: normal;
 			}
 		}
@@ -79,20 +53,19 @@
 	.bottom {
 		position: relative;
 		width: 100%;
-		margin-top: 5px;
+		height: 250px;
 		padding: 20px 16px 10px 16px;
 		box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-		background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-		border-radius: 0.2rem;
+		background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+		border-radius: 0 0 2rem 2rem;
 
 		.name-address {
 			width: 100%;
-			height: 48px;
+			height: 200px;
 
 			.name {
 				width: 100%;
-				height: 23px;
-				overflow: hidden;
+				height: 130px;
 
 				p {
 					width: 200px;
@@ -100,28 +73,27 @@
 					-webkit-background-clip: text;
 					color: transparent;
 					font-family: $font;
-					font-size: 15px;
+					font-size: 17px;
 					font-style: normal;
-					font-weight: 600;
+					font-weight: 500;
 					line-height: normal;
-					text-transform: capitalize;
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
+					text-wrap: wrap;
+
 				}
 			}
 
 			.address {
 				width: 100%;
-				overflow: hidden;
+				margin-top: 20px;
 
 				p {
 					width: 200px;
+					height: 30px;
 					background-image: linear-gradient(to left, #C33764, #1D2671);
 					-webkit-background-clip: text;
 					color: transparent;
 					font-family: $font;
-					font-size: 13px;
+					font-size: 16px;
 					font-style: normal;
 					font-weight: 400;
 					line-height: normal;
@@ -129,66 +101,17 @@
 					overflow: hidden;
 					text-overflow: ellipsis;
 				}
+
+				.divider {
+					width: 90%;
+					height: 1px;
+					margin-bottom: 10px;
+					background-image: linear-gradient(to left, #C33764, #1D2671);
+				}
 			}
 		}
 
-		.divider {
-			width: 90%;
-			height: 1px;
-			margin-bottom: 10px;
-			background-image: linear-gradient(to left, #C33764, #1D2671);
-		}
 
-		.type-buttons {
-			flex-direction: row;
-			width: 90%;
-			justify-content: space-between;
-			align-items: center;
-
-			.type {
-				width: 100px;
-				height: 30px;
-				display: flex;
-				flex-direction: row;
-				justify-content: center;
-				align-items: center;
-				border: 1px solid #405FF2;
-				border-radius: 0.5rem;
-				transition: transform 1s;
-
-				&:hover {
-					transform: scale(1.05);
-					background: #405FF2;
-					border: 1px solid #405FF2;
-					border-radius: 0.5rem;
-
-					.p {
-						color: #fff;
-					}
-
-					.icon {
-						color: #fff;
-					}
-				}
-
-				.p {
-					margin-left: 5px;
-					color: #405FF2;
-					font-family: $font;
-					font-size: 15px;
-					font-style: normal;
-					line-height: normal;
-				}
-
-				.icon {
-					width: 15px;
-					height: 15px;
-					color: #405FF2;
-					margin-bottom: 2px;
-				}
-
-			}
-		}
 	}
 }
 

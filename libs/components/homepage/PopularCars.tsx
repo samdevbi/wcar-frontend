@@ -96,16 +96,13 @@ const PopularCars = (props: PopularProductsProps) => {
 									</Stack>
 									<Stack className="address">
 										<Typography>
-											Category: {main?.productType}
+											Category: <strong>{main?.productType}</strong>
 										</Typography>
-									</Stack>
-									<Stack className="address">
 										<Typography>
-											${main?.productPrice}
+											Price: <strong>${main?.productPrice}</strong>
 										</Typography>
 									</Stack>
 								</Stack>
-								{/* <Stack className="divider"></Stack> */}
 								<Stack className="type-buttons">
 									<Stack className="type">
 										<Link
