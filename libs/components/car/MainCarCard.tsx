@@ -62,6 +62,16 @@ const MainCarCard = (props: CarCardType) => {
 							<Typography>TOP</Typography>
 						</Stack>
 					)}
+					<div onClick={() => saveCarHandler(user, car?._id)}>
+						{mySaved ? (
+							<BookmarkIcon style={{ color: '#FDFFF5' }} />
+						) : car?.meSaved && car?.meSaved?.[0]?.mySaved ? (
+							<BookmarkIcon style={{ color: '#FDFFF5' }} />
+						) : (
+							<BookmarkBorderIcon style={{ color: '#FDFFF5' }} />
+						)}
+					</div>
+
 				</Stack>
 				<Stack className="bottom">
 					<Stack className="name-address">
@@ -77,40 +87,27 @@ const MainCarCard = (props: CarCardType) => {
 						</Stack>
 						<Stack className="address">
 							<Typography>
-								{t('City')}: {car?.carLocation}
+								<strong>{t('City')}</strong>: {car?.carLocation}
 							</Typography>
 						</Stack>
 						<Stack className="address">
 							<Typography>
-								{t('Address')}: {car?.carAddress}
+								<strong>{t('Address')}</strong>: {car?.carAddress}
 							</Typography>
 						</Stack>
 					</Stack>
 					<Stack className="options">
 						<Stack className="option">
-							<div className={'box'}>
-								<img src="/img/icons/speedb.svg" alt="" /> <Typography>{t('Mileage')}</Typography>
-							</div>
-							<Typography>{car?.carMileage} {t('Mile')}</Typography>
+							<img src="/img/icons/speedb.svg" alt="" />
+							<Typography>{car?.carMileage.toLocaleString('de-DE')} {t('km')}</Typography>
 						</Stack>
 						<Stack className="option">
-							<div className={'box'}>
-								<img src="/img/icons/petrolb.svg" alt="" /> <Typography>{t('Petrol')}</Typography>
-							</div>
+							<img src="/img/icons/petrolb.svg" alt="" />
 							<Typography>{car?.carFuelType}</Typography>
 						</Stack>
 						<Stack className="option">
-							<div className={'box'}>
-								<img src="/img/icons/transb.svg" alt="" /> <Typography>{t('Transmission')}</Typography>
-							</div>
+							<img src="/img/icons/transb.svg" alt="" />
 							<Typography>{car?.carTransmission}</Typography>
-						</Stack>
-					</Stack>
-					<Stack className="type-buttons">
-						<Stack className="type">
-							{car?.carRent === true && (<div className={'feature'}>{t('Rent')}</div>)}
-							{car?.carBarter === true && (<div className={'feature'}>{t('Barter')}</div>)}
-							{car?.carBluetoothConnectivity === true && (<div className={'feature'}>{t('Bluetooth')}</div>)}
 						</Stack>
 					</Stack>
 				</Stack>
@@ -134,25 +131,13 @@ const MainCarCard = (props: CarCardType) => {
 							<Typography className="view-cnt">{car?.carLikes}</Typography>
 						</Stack>
 					)}
-					<div className={'save-box'}>
-						<span>{t('Save')}</span>
-						<div onClick={() => saveCarHandler(user, car?._id)}>
-							{mySaved ? (
-								<BookmarkIcon color="secondary" />
-
-							) : car?.meSaved && car?.meSaved?.[0]?.mySaved ? (
-
-								<BookmarkIcon color="secondary" />
-
-							) : (
-								<BookmarkBorderIcon />
-							)}
-						</div>
-					</div>
-					<Typography className={'price'}>${car?.carPrice}</Typography>
 					<div className={'btn-box'}>
-						<Button className={'button'} onClick={() => pushDetailhandler(car?._id)}>{t('View Detail')}</Button>
+						<Stack className="type">
+							{car?.carRent === true && (<div className={'feature'}>{t('Rent')}</div>)}
+							{car?.carBarter === true && (<div className={'feature'}>{t('Barter')}</div>)}
+						</Stack>
 					</div>
+					<Typography className={'price'}><strong>${car?.carPrice.toLocaleString('de-DE')}</strong></Typography>
 				</Stack>
 			</Stack>
 		);
