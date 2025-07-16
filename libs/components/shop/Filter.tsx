@@ -235,7 +235,7 @@ const Filter = (props: FilterType) => {
 				</Stack>
 				<div className={'divider'}></div>
 				<Stack className={'find-your-home'}>
-					<Typography className={'title'}>{t('Price Range')}</Typography>
+					<Typography className={'title'}>{t('Price')}</Typography>
 					<Stack className="square-year-input">
 						<input
 							type="number"

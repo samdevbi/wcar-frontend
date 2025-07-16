@@ -169,7 +169,7 @@ const ProductList: NextPage = ({ initialInput, ...props }: any) => {
 							{/* @ts-ignore */}
 							<Filter searchFilter={searchFilter} setSearchFilter={setSearchFilter} initialInput={initialInput} />
 						</Stack>
-						<Stack className="main-config" mb={'76px'}>
+						<Stack className="main-config">
 							<Stack className={'list-config'}>
 								{products?.length === 0 ? (
 									<div className={'no-data'}>
@@ -214,7 +214,7 @@ const ProductList: NextPage = ({ initialInput, ...props }: any) => {
 ProductList.defaultProps = {
 	initialInput: {
 		page: 1,
-		limit: 12,
+		limit: 9,
 		sort: 'createdAt',
 		direction: 'DESC',
 		search: {},
