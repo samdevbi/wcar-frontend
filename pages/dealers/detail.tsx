@@ -18,6 +18,10 @@ import { CommentInput, CommentsInquiry } from '../../libs/types/comment/comment.
 import { CommentGroup } from '../../libs/enums/comment.enum';
 import { Comment } from '../../libs/types/comment/comment';
 import { useTranslation } from 'next-i18next';
+import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/MiscellaneousServicesOutlined';
+import DoneAllSharpIcon from '@mui/icons-material/DoneAllSharp';
+import KeyboardArrowDownSharpIcon from '@mui/icons-material/KeyboardArrowDownSharp';
 
 
 
@@ -46,6 +50,8 @@ const DealerDetail: NextPage = ({ initialComment, ...props }: any) => {
         commentContent: '',
         commentRefId: '',
     });
+    const [showAll, setShowAll] = React.useState(false);
+    const maxLength = 1000;
 
     /** APOLLO REQUESTS **/
     const {
@@ -94,6 +100,12 @@ const DealerDetail: NextPage = ({ initialComment, ...props }: any) => {
             </Stack>
         );
     };
+
+    function getShortText(text: string | undefined, length = 1000) {
+        if (!text) return '';
+        if (text.length <= length) return text;
+        return text.substring(0, length) + '...';
+    }
 
     if (device === 'mobile') {
         return <div>DEALER DETAIL PAGE</div>;
@@ -246,79 +258,90 @@ const DealerDetail: NextPage = ({ initialComment, ...props }: any) => {
                         <Stack className={'property-desc-config'}>
                             <Stack className={'left-config'}>
                                 <Stack className={'prop-desc-config'}>
+                                    <span>Description</span>
                                     <Typography className={'data'}>
-                                        {dealer?.longDesc}
+                                        {showAll ? dealer?.longDesc : getShortText(dealer?.longDesc, maxLength)}
                                     </Typography>
+                                    {dealer?.longDesc && dealer?.longDesc.length > maxLength && (
+                                        <Button
+                                            sx={{ mt: 1, borderRadius: '2rem', textTransform: 'none' }}
+                                            onClick={() => setShowAll((v) => !v)}
+                                        >
+                                            {showAll ? 'Show less' : 'Show all'}
+                                            <KeyboardArrowDownSharpIcon />
+                                        </Button>
+                                    )}
                                 </Stack>
-                                <Stack className={'prop-desc-config'}>
+                                <Stack className={'prop-desc-service'}>
                                     <Stack className={'bottom'}>
                                         <Typography className={'title'}>{t('Our Service')}</Typography>
                                         <Stack className={'info-box'}>
                                             <Stack className={'right'}>
                                                 {dealer?.dealerFinancing === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/financingdealer.svg" alt="" />
                                                         <Typography className={'data'}>{t('Financing')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerCarService === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/carservice.svg" alt="" />
+
                                                         <Typography className={'data'}>{t('Car Service')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerTradeIn === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/tradein.svg" alt="" />
                                                         <Typography className={'data'}>{t('Trade In')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerCustomization === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/customazation.svg" alt="" />
                                                         <Typography className={'data'}>{t('Customization')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerWarranties === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/warranties.svg" alt="" />
                                                         <Typography className={'data'}>{t('Warranties')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerParts === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/carparts.svg" alt="" />
                                                         <Typography className={'data'}>{t('Car Parts')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerAccessories === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/accessories.svg" alt="" />
                                                         <Typography className={'data'}>{t('Accessories')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerCarDetailing === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/detailservice.svg" alt="" />
                                                         <Typography className={'data'}>{t('Car Detailing')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerCarWash === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/carwash.svg" alt="" />
                                                         <Typography className={'data'}>{t('Car Wash')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerCarTestDrive === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/testdrive.svg" alt="" />
                                                         <Typography className={'data'}>{t('Test Drive')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                                 {dealer?.dealerCarDelivery === true && (
                                                     <Box component={'div'} className={'info'}>
-                                                        <img src="/img/icons/deliverycar.svg" alt="" />
                                                         <Typography className={'data'}>{t('Delivery')}</Typography>
+                                                        <DoneAllSharpIcon className={'img'} />
                                                     </Box>
                                                 )}
                                             </Stack>
@@ -327,7 +350,7 @@ const DealerDetail: NextPage = ({ initialComment, ...props }: any) => {
                                 </Stack>
                                 <Stack className={'address-config'}>
                                     <Typography className={'title'}>{t('Our Location')}</Typography>
-                                    <Typography className={'address'}>{t('City')}: {dealer?.address}</Typography>
+                                    <Typography className={'address'}><strong>{t('Address')}</strong>: {dealer?.address}</Typography>
                                     <Stack className={'map-box'}>
                                         <iframe
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25867.098915951767!2d128.68632810247993!3d35.86402299180927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35660bba427bf179%3A0x1fc02da732b9072f!2sGeumhogangbyeon-ro%2C%20Dong-gu%2C%20Daegu!5e0!3m2!1suz!2skr!4v1695537640704!5m2!1suz!2skr"
