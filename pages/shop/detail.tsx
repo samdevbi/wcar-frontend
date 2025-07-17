@@ -261,20 +261,7 @@ const ProductDetail: NextPage = ({ initialComment, ...props }: any) => {
                                     <Stack className={'reviews-config'}>
                                         <Stack className={'filter-box'}>
                                             <Stack className={'review-cnt'}>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
-                                                    <g clipPath="url(#clip0_6507_7309)">
-                                                        <path
-                                                            d="M15.7183 4.60288C15.6171 4.3599 15.3413 4.18787 15.0162 4.16489L10.5822 3.8504L8.82988 0.64527C8.7005 0.409792 8.40612 0.257812 8.07846 0.257812C7.7508 0.257812 7.4563 0.409792 7.32774 0.64527L5.57541 3.8504L1.14072 4.16489C0.815641 4.18832 0.540363 4.36035 0.438643 4.60288C0.337508 4.84586 0.430908 5.11238 0.676772 5.28084L4.02851 7.57692L3.04025 10.9774C2.96794 11.2275 3.09216 11.486 3.35771 11.636C3.50045 11.717 3.66815 11.7575 3.83643 11.7575C3.98105 11.7575 4.12577 11.7274 4.25503 11.667L8.07846 9.88098L11.9012 11.667C12.1816 11.7979 12.5342 11.7859 12.7992 11.636C13.0648 11.486 13.189 11.2275 13.1167 10.9774L12.1284 7.57692L15.4801 5.28084C15.7259 5.11238 15.8194 4.84641 15.7183 4.60288Z"
-                                                            fill="#181A20"
-                                                        />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_6507_7309">
-                                                            <rect width="15.36" height="12" fill="white" transform="translate(0.398438)" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-                                                <Typography className={'reviews'}>{commentTotal} {t('Reviews')}</Typography>
+                                                <Typography className={'reviews'}>{commentTotal} {t('Comments')}</Typography>
                                             </Stack>
                                         </Stack>
                                         <Stack className={'review-list'}>
@@ -327,44 +314,6 @@ const ProductDetail: NextPage = ({ initialComment, ...props }: any) => {
                                 </Stack>
                             </Stack>
                         </Stack>
-                        {destinationProducts.length !== 0 && (
-                            <Stack className={'similar-properties-config'}>
-                                <Stack className={'title-pagination-box'}>
-                                    <Stack className={'title-box'}>
-                                        <Typography className={'main-title'}>{t('Destination Products')}</Typography>
-                                        <Typography className={'sub-title'}>{t('There are also similar Products available here')}</Typography>
-                                    </Stack>
-                                    <Stack className={'pagination-box'}>
-                                        <WestIcon className={'swiper-similar-prev'} />
-                                        <div className={'swiper-similar-pagination'}></div>
-                                        <EastIcon className={'swiper-similar-next'} />
-                                    </Stack>
-                                </Stack>
-                                <Stack className={'cards-box'}>
-                                    <Swiper
-                                        className={'similar-homes-swiper'}
-                                        slidesPerView={'auto'}
-                                        spaceBetween={35}
-                                        modules={[Autoplay, Navigation, Pagination]}
-                                        navigation={{
-                                            nextEl: '.swiper-similar-next',
-                                            prevEl: '.swiper-similar-prev',
-                                        }}
-                                        pagination={{
-                                            el: '.swiper-similar-pagination',
-                                        }}
-                                    >
-                                        {destinationProducts.map((product: Product) => {
-                                            return (
-                                                <SwiperSlide className={'similar-homes-slide'} key={product?.productTitle}>
-                                                    <ProductCard product={product} key={product?._id} />
-                                                </SwiperSlide>
-                                            );
-                                        })}
-                                    </Swiper>
-                                </Stack>
-                            </Stack>
-                        )}
                     </Stack>
                 </div>
             </div>
