@@ -1,6 +1,5 @@
 #pc-wrap {
 	#member-page {
-		background: #001e1c;
 
 		.container {
 			.member-page {
@@ -17,16 +16,16 @@
 					flex-direction: row;
 					margin: 100px 0 200px 0;
 					border-radius: 1rem;
-					background: #013c38;
 
 					.left-config {
 						position: relative;
 						padding: 0 0 0 0;
 						width: 266px;
-						height: 700px;
-						border-radius: 1rem;
-						background: #336659;
-						margin: 180px 20px 40px 20px;
+						height: 640px;
+						border: 1px solid #b9b9b9;
+						border-radius: 2rem;
+						box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
 
 						.profile {
 							margin-top: 5px;
@@ -67,15 +66,24 @@
 									img {
 										margin-top: 3px;
 										margin-right: 4px;
-										width: 16px;
-										height: 16px;
+										width: 10px;
+										height: 10px;
+									}
+
+									p {
+										color: #181a20;
+										font-family: $font;
+										font-size: 12px;
+										font-style: normal;
+										font-weight: 600;
+										line-height: normal;
 									}
 								}
 
 								.view-list {
 									margin-top: 5px;
 									font-weight: 300;
-									color: rgb(187, 187, 187);
+									color: rgb(131, 130, 130);
 								}
 							}
 						}
@@ -206,9 +214,8 @@
 					.main-config {
 						position: relative;
 						width: 936px;
-						margin-top: 52px;
+						margin-left: 50px;
 						align-items: center;
-						gap: 109px;
 
 						.list-config {
 							display: flex;

@@ -52,15 +52,12 @@ const SavedCarCard = (props: SavedCarCardProps) => {
 					<Divider sx={{ mt: '2px', mb: '2px' }} />
 					<div className={'options'}>
 						<div>
-							<img src="/img/icons/speed.svg" alt="" />
-							<span>{car?.carMileage} Mile </span>
+							<span>{car?.carMileage} Mile /</span>
 						</div>
 						<div>
-							<img src="/img/icons/petrol.svg" alt="" />
-							<span>{car?.carFuelType}</span>
+							<span>{car?.carFuelType}/</span>
 						</div>
 						<div>
-							<img src="/img/icons/trans.svg" alt="" />
 							<span>{car?.carTransmission}</span>
 						</div>
 					</div>

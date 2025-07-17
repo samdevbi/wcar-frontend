@@ -7,25 +7,29 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		background: #181a20;
 
 		.container {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			gap: 30px;
 
 			.agent-info {
-				margin-left: 58px;
 				width: 100%;
+				padding: 30px;
 				display: flex;
 				flex-direction: row;
 				align-items: center;
+				border: 1px solid #3a3a3a3e;
+				box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+				border-radius: 2rem;
+				gap: 30px;
 
 				img {
-					margin-right: 32px;
+					margin-right: 50px;
 					width: 200px;
 					height: 300px;
-					border-radius: 1rem;
+					border-radius: 2rem;
 					cursor: pointer;
 					object-position: top;
 					object-fit: cover;
@@ -36,18 +40,18 @@
 					flex-direction: column;
 
 					strong {
-						color: #fff;
+						color: #181a20;
 						font-family: $font;
-						font-size: 24px;
+						font-size: 40px;
 						font-style: normal;
-						font-weight: 600;
+						font-weight: 800;
 						line-height: normal;
 						text-transform: capitalize;
 						cursor: pointer;
 					}
 
 					div {
-						margin-top: 13px;
+						margin-top: 30px;
 						display: flex;
 						flex-direction: row;
 						align-items: center;
@@ -57,25 +61,17 @@
 							height: 30px;
 						}
 
-						img {
-							margin-left: 30px;
-							margin-right: 10px;
-							width: 20px;
-							height: 20px;
-						}
-
 						.icon {
-							margin-left: 30px;
 							margin-right: 10px;
-							width: 20px;
-							height: 20px;
-							color: #fff;
+							width: 30px;
+							height: 30px;
+							color: #181a20;
 						}
 
 						span {
-							color: #fff;
+							color: #181a20;
 							font-family: $font;
-							font-size: 16px;
+							font-size: 18px;
 							font-style: normal;
 							font-weight: 400;
 							line-height: 28px;
@@ -87,17 +83,18 @@
 			.agent-home-list {
 				position: relative;
 				width: 100%;
-				margin-top: 33px;
-				padding: 0px 0 46px;
+				margin-top: 100px;
+				padding: 30px;
 				display: flex;
 				flex-direction: column;
-				border-radius: 12px;
-				background: rgba(93, 93, 94, 0.535);
-				box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
+				background-color: #fff;
+				border-radius: 2rem;
+				border: 1px solid #3a3a3a31;
+				box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 				.card-wrap {
 					position: relative;
-					margin-top: 35px;
+					margin-top: 20px;
 					width: 100%;
 					height: auto;
 					display: flex;
@@ -105,11 +102,10 @@
 					flex-wrap: wrap;
 
 					.wrap-main {
-						margin-right: 0px;
-						margin-left: 5px;
 						display: flex;
 						flex-direction: row;
 						flex-wrap: wrap;
+
 					}
 
 					.agent-card {
@@ -133,7 +129,7 @@
 								left: 12px;
 								border-radius: 6px;
 								background: #eb6753;
-								color: #fff;
+								color: #181a20;
 								font-family: $font;
 								font-size: 12px;
 								font-style: normal;
@@ -173,10 +169,11 @@
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+					margin-top: 100px;
 
 					span {
 						margin-top: 20px;
-						color: #fff;
+						color: #181a20;
 						font-family: $font;
 						font-size: 16px;
 						font-style: normal;
@@ -189,54 +186,25 @@
 			.review-box {
 				position: relative;
 				margin-top: 75px;
-				padding: 58px 19px;
-				width: 95%;
+				width: 100%;
 				height: auto;
-				border-radius: 24px;
-
-				.main-intro {
-					display: flex;
-					flex-direction: column;
-
-					span {
-						color: #fff;
-						font-family: $font;
-						font-size: 30px;
-						font-style: normal;
-						font-weight: 600;
-						line-height: normal;
-						letter-spacing: 0.6px;
-						text-transform: capitalize;
-					}
-
-					p {
-						color: #fff;
-						font-family: $font;
-						font-size: 18px;
-						font-style: normal;
-						font-weight: 400;
-						line-height: 26px;
-					}
-				}
+				border-radius: 2rem;
 
 				.review-wrap {
 					padding: 29px 25px;
 					margin-top: 57px;
 					display: flex;
 					flex-direction: column;
-					border-radius: 12px;
-					border: 1px solid #3a3a3a;
-					box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
+					border-radius: 2rem;
+					border: 1px solid #3a3a3a41;
+					box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 					.title-box {
-						svg {
-							width: 10px;
-							height: 10px;
-						}
+						margin-bottom: 50px;
 
 						span {
 							margin-left: 8px;
-							color: #fff;
+							color: #181a20;
 							font-family: $font;
 							font-size: 17px;
 							font-style: normal;
@@ -274,9 +242,9 @@
 									flex-direction: column;
 
 									strong {
-										color: #fff;
+										color: #181a20;
 										font-family: $font;
-										font-size: 15px;
+										font-size: 18px;
 										font-style: normal;
 										font-weight: 600;
 										line-height: normal;
@@ -284,7 +252,7 @@
 
 									span {
 										margin-top: 4px;
-										color: #fff;
+										color: #181a20;
 										font-family: $font;
 										font-size: 15px;
 										font-style: normal;
@@ -305,10 +273,10 @@
 						}
 
 						p {
-							margin-top: 10px;
-							color: #fff;
+							margin-top: 30px;
+							color: #181a20;
 							font-family: $font;
-							font-size: 14px;
+							font-size: 18px;
 							font-style: normal;
 							font-weight: 400;
 							line-height: 26px;
@@ -325,13 +293,15 @@
 				}
 
 				.leave-review-config {
-					margin-top: 40px;
-					border-radius: 12px;
-					box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
+					margin-top: 100px;
+					border-radius: 2rem;
+					box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+					border: 1px solid #3a3a3a31;
 					padding: 30px 38px;
+					margin-bottom: 100px;
 
 					.main-title {
-						color: #fff;
+						color: #181a20;
 						font-family: $font;
 						font-size: 22px;
 						font-style: normal;
@@ -341,7 +311,7 @@
 
 					.review-title {
 						margin-top: 20px;
-						color: #fff;
+						color: #181a20;
 						font-family: $font;
 						font-size: 14px;
 						font-style: normal;
@@ -355,14 +325,13 @@
 						margin-top: 8px;
 						padding: 20px;
 						border-radius: 8px;
-						border: 1px solid #3a3a3a;
-						color: #fff;
+						border: 1px solid #3a3a3a31;
+						color: #181a20;
 						font-family: $font;
 						font-size: 14px;
 						font-style: normal;
 						font-weight: 400;
 						line-height: 26px;
-						background: #3a3a3a;
 					}
 
 					.submit-btn {

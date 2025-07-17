@@ -130,7 +130,7 @@ const Community: NextPage = ({ initialInput, ...props }: T) => {
 							<Stack className="left-config">
 								<Stack className={'image-info'}>
 									<Stack className={'community-name'}>
-										<Typography className={'name'}>WCar {t('Community')}</Typography>
+										<Typography className={'name'}>Car Sale On<strong> {t('Posts')}</strong></Typography>
 									</Stack>
 								</Stack>
 
@@ -189,9 +189,6 @@ const Community: NextPage = ({ initialInput, ...props }: T) => {
 									<Stack className="title-box">
 										<Stack className="left">
 											<Typography className="title">{searchCommunity.search.articleCategory} {t('BOARD')}</Typography>
-											<Typography className="sub-title">
-												{t('Express your opinions freely here without content restrictions')}
-											</Typography>
 										</Stack>
 										<Button
 											onClick={() =>

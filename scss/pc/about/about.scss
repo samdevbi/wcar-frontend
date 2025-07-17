@@ -109,7 +109,7 @@
 
           img {
             width: 100%;
-            border-radius: 12px;
+            border-radius: 2rem;
           }
         }
 
@@ -201,17 +201,16 @@
       .about-banner {
         position: absolute;
         right: 0%;
-        width: 821px;
+        width: 1000px;
         height: 720px;
-        border-radius: 0 24px 24px 0;
         background-position: center;
-        background-size: cover;
         object-fit: cover;
-        object-position: center;
+        object-position: right;
       }
 
       .container {
         flex-direction: column;
+        gap: 30px;
 
         strong {
           width: 445px;

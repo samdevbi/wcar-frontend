@@ -53,7 +53,7 @@
 						width: 333px;
 						height: 50px;
 						border-radius: 1rem;
-						border: 1px solid #405FF2;
+						border: 1px solid #405ef23b;
 						color: #181a20;
 						font-family: $font;
 						font-size: 14px;
@@ -91,25 +91,29 @@
 
 			.card-wrap {
 				position: relative;
-				margin-top: 35px;
+				margin-top: 100px;
 				width: 100%;
 				min-height: 500px;
 				height: auto;
 				display: flex;
 				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
 				flex-wrap: wrap;
+				gap: 33px;
 			}
 
 			.pagination {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				margin-top: 100px;
 
 				span {
 					margin-top: 20px;
 					color: #181a20;
 					font-family: $font;
-					font-size: 14px;
+					font-size: 16px;
 					font-style: normal;
 					font-weight: 400;
 					line-height: 26px;

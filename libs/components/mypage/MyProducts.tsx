@@ -104,7 +104,6 @@ const MyProducts: NextPage = ({ initialInput, ...props }: any) => {
 				<Stack className="main-title-box">
 					<Stack className="right-box">
 						<Typography className="main-title">{t('My')} {t('Products')}</Typography>
-						<Typography className="sub-title">{t('We are glad to see you again!')}</Typography>
 					</Stack>
 				</Stack>
 				<Stack className="property-list-box">

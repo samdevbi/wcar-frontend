@@ -2,7 +2,6 @@
 	#community-detail-page {
 		position: relative;
 		padding-bottom: 135px;
-		background: #001e1c;
 
 		.container {
 			padding-top: 100px;
@@ -14,14 +13,14 @@
 				gap: 31px;
 
 				.left-config {
-					width: 266px;
+					width: 280px;
 					height: fit-content;
 					gap: 30px;
-					padding: 30px 15px 57px 21px;
+					padding: 30px 15px 57px 19px;
 					margin-top: 100px;
-					border-radius: 12px;
-					background: #013c38;
-					box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
+					border: 1px solid #c4c4c4;
+					border-radius: 2rem;
+					box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 					.image-info {
 						width: 100%;
@@ -38,9 +37,9 @@
 						.community-name {
 							.name {
 								margin-top: 15px;
-								color: #fff;
+								color: #181a20;
 								font-family: $font;
-								font-size: 15px;
+								font-size: 22px;
 								font-style: normal;
 								font-weight: 600;
 								line-height: normal;
@@ -57,7 +56,7 @@
 						border-radius: 6px;
 						border: 1px solid #181a20;
 						margin-bottom: 10px;
-						color: #fff;
+						color: #181a20;
 						font-family: $font;
 						font-size: 14px;
 						font-style: normal;
@@ -99,23 +98,13 @@
 							height: auto;
 
 							.title {
-								color: #fff;
+								color: #181a20;
 								font-family: $font;
 								font-size: 24px;
 								font-style: normal;
 								font-weight: 600;
 								line-height: normal;
 								letter-spacing: 0.24px;
-							}
-
-							.sub-title {
-								color: #fff;
-								font-family: $font;
-								font-size: 13px;
-								font-style: normal;
-								font-weight: 700;
-								line-height: normal;
-								letter-spacing: 0.325px;
 							}
 						}
 
@@ -138,21 +127,24 @@
 						.first-box-config {
 							width: 1012px;
 							min-height: 500px;
-							border-radius: 8px 8px 0px 0px;
-							box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
 							.content-and-info {
 								width: 100%;
-								height: 126px;
+								height: 220px;
+								margin-top: 15px;
 								padding: 35px 25px;
 								flex-direction: row;
 								justify-content: space-between;
+								border: 1px solid #c4c4c4;
+								border-radius: 2rem;
+								box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 								.content {
 									gap: 12px;
 
+
 									.content-data {
-										color: #fff;
+										color: #181a20;
 										font-family: $font;
 										font-size: 18px;
 										font-style: normal;
@@ -168,15 +160,16 @@
 										gap: 5px;
 
 										.member-img {
-											width: 30.023px;
-											height: 30px;
+											width: 50px;
+											height: 50px;
+											border-radius: 2rem;
 											cursor: pointer;
 										}
 
 										.member-nick {
-											color: #fff;
+											color: #181a20;
 											font-family: $font;
-											font-size: 13px;
+											font-size: 16px;
 											font-style: normal;
 											font-weight: 400;
 											line-height: normal;
@@ -187,7 +180,7 @@
 										.divider {
 											width: 1px;
 											height: 16px;
-											background: #eee;
+											background: #828181;
 										}
 
 										.time-added {
@@ -222,7 +215,7 @@
 
 										.text {
 											padding-top: 2 px;
-											color: #fff;
+											color: #181a20;
 											font-family: $font;
 											font-size: 11px;
 											font-style: normal;
@@ -260,7 +253,7 @@
 										width: 105.081px;
 										height: 45px;
 										gap: 5px;
-										border-radius: 2px;
+										border-radius: 2rem;
 										background: #405FF2;
 
 										p {
@@ -279,14 +272,17 @@
 
 						.second-box-config {
 							width: 1012px;
-							height: auto;
+							margin-top: 100px;
+							height: 200px;
 							padding: 30px 24px;
 							gap: 11px;
-							border: 3px solid #001e1c;
+							border: 1px solid #c4c4c4;
+							border-radius: 2rem;
+							box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 							.title-text {
 								align-self: flex-start;
-								color: #fff;
+								color: #181a20;
 								text-align: center;
 								font-family: $font;
 								font-size: 17px;
@@ -299,14 +295,16 @@
 							.leave-comment {
 								input {
 									width: 100%;
-									height: 61px;
+									height: 50px;
 									outline: none;
 									padding: 22px 17px;
+									border-radius: 2rem;
+									border: none;
 
 									::placeholder {
 										color: #c0c0c0;
 										font-family: $font;
-										font-size: 14px;
+										font-size: 16px;
 										font-style: normal;
 										font-weight: 500;
 										line-height: normal;
@@ -317,6 +315,7 @@
 								.button-box {
 									width: 100%;
 									height: 42px;
+									margin-top: 20px;
 									flex-direction: row;
 									justify-content: space-between;
 									align-items: center;
@@ -324,7 +323,7 @@
 									border-top: none;
 
 									p {
-										color: #fff;
+										color: #181a20;
 										font-family: $font;
 										font-size: 14px;
 										font-style: normal;
@@ -336,7 +335,7 @@
 									button {
 										width: 100.077px;
 										height: 100%;
-										border-radius: 0;
+										border-radius: 2rem;
 										background: #405FF2;
 										color: #fff;
 										font-family: $font;
@@ -354,6 +353,7 @@
 							width: 100%;
 							height: auto;
 							border-top: none;
+							margin-top: 100px;
 
 							.comments-title {
 								width: 112.087px;
@@ -381,13 +381,16 @@
 						}
 
 						.comments-box {
+
 							.main-comment {
 								width: 100%;
 								height: auto;
+								margin-top: 30px;
 								padding: 20px 24px;
-								gap: 17px;
-								border: 1px solid #efefef;
-								border-top: none;
+								gap: 30px;
+								border: 1px solid #919191;
+								border-radius: 2rem;
+								box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 								.member-info {
 									width: 100%;
@@ -412,7 +415,7 @@
 
 										.name-date-column {
 											.name {
-												color: #fff;
+												color: #181a20;
 												font-family: $font;
 												font-size: 16px;
 												font-style: normal;
@@ -422,7 +425,7 @@
 											}
 
 											.date {
-												color: #fff;
+												color: #181a20;
 												font-family: $font;
 												font-size: 13px;
 												font-style: normal;
@@ -444,7 +447,7 @@
 									height: auto;
 
 									p {
-										color: #fff;
+										color: #181a20;
 										font-family: $font;
 										font-size: 16px;
 										font-style: normal;
@@ -468,7 +471,7 @@
 
 				.similar-articles-title {
 					padding-left: 56px;
-					color: #fff;
+					color: #181a20;
 					font-family: $font;
 					font-size: 30px;
 					font-style: normal;

@@ -25,7 +25,7 @@ const CommunityCard = (props: CommunityCardProps) => {
 	const user = useReactiveVar(userVar);
 	const imagePath: string = article?.articleImage
 		? `${REACT_APP_API_URL}/${article?.articleImage}`
-		: '/img/community/communityImg.png';
+		: '/img/banner/banner.webp';
 
 	/** HANDLERS **/
 	const chooseArticleHandler = (e: React.SyntheticEvent, article: Article) => {

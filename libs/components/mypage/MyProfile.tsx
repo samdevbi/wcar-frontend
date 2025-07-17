@@ -171,7 +171,6 @@ const MyProfile: NextPage = ({ initialValues, ...props }: any) => {
 				<Stack className="main-title-box">
 					<Stack className="right-box">
 						<Typography className="main-title">{t('My')} {t('Profile')}</Typography>
-						<Typography className="sub-title">{t('We are glad to see you again!')}</Typography>
 					</Stack>
 				</Stack>
 				<Stack className="top-box">

@@ -90,7 +90,6 @@ const MyArticles: NextPage = ({ initialInput, ...props }: T) => {
 				<Stack className="main-title-box">
 					<Stack className="right-box">
 						<Typography className="main-title">{t('Article')}</Typography>
-						<Typography className="sub-title">{t('We are glad to see you again!')}</Typography>
 					</Stack>
 				</Stack>
 				<Stack className="article-list-box">

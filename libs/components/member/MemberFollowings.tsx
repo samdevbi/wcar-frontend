@@ -76,7 +76,7 @@ const MemberFollowings = (props: MemberFollowingsProps) => {
 				<Stack className="follows-list-box">
 					<Stack className="listing-title-box">
 						<Typography className="title-text">{t('Name')}</Typography>
-						<Typography className="title-text">{t('Subscription')}</Typography>
+						<Typography className="title-text">{t('Followings')}</Typography>
 					</Stack>
 					{memberFollowings?.length === 0 && (
 						<div className={'no-data'}>
@@ -164,7 +164,7 @@ const MemberFollowings = (props: MemberFollowingsProps) => {
 MemberFollowings.defaultProps = {
 	initialInput: {
 		page: 1,
-		limit: 5,
+		limit: 9,
 		search: {
 			followerId: '',
 		},

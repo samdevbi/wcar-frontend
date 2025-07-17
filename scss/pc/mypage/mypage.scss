@@ -1,6 +1,5 @@
 #pc-wrap {
 	#my-page {
-		background: rgb(7, 10, 24);
 
 		.container {
 			.my-page {
@@ -8,11 +7,10 @@
 				width: 100%;
 				flex-direction: row;
 				gap: 25px;
-				padding-top: 96px;
+				padding-top: 100px;
 
 				.back-frame {
 					width: 1260px;
-					height: auto;
 					display: flex;
 					flex-direction: row;
 					justify-content: space-between;
@@ -20,24 +18,24 @@
 
 					.left-config {
 						position: relative;
-						padding: 0 0 0 0;
 						width: 266px;
-						height: auto;
-						background: rgb(7, 10, 24);
-						margin: 180px 20px 40px 20px;
+						height: 1000px;
+						margin-top: 180px;
+						box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+						border-radius: 2rem;
+						background-color: #E4E4E1;
+						background-image: linear-gradient(to left, #243949 0%, #517fa4 100%);
 
 						.profile {
-							margin-top: 5px;
 							position: relative;
 							display: flex;
 							flex-direction: column;
 
 							.profile-img {
 								img {
-									width: 250px;
-									height: 150px;
-									border-radius: 1rem;
-									background: rgb(23, 26, 40);
+									width: 215px;
+									height: 215px;
+									border-radius: 10rem;
 									bottom: 12px;
 									object-fit: cover;
 								}
@@ -46,17 +44,18 @@
 							.user-info {
 								display: flex;
 								flex-direction: column;
+								gap: 10px;
 
 								.user-name {
-									width: 200px;
+									width: 215px;
 									color: #fff;
 									font-family: $font;
-									font-size: 15px;
+									font-size: 18px;
 									font-style: normal;
-									font-weight: 400;
+									font-weight: 600;
 									line-height: normal;
 									overflow: hidden;
-									text-wrap: nowrap;
+									text-wrap: wrap;
 								}
 
 								.user-phone {
@@ -69,6 +68,7 @@
 										margin-right: 4px;
 										width: 16px;
 										height: 16px;
+
 									}
 								}
 
@@ -81,12 +81,11 @@
 
 						.sections {
 							height: auto;
-							gap: 45px;
 							margin-top: 30px;
 
 							.section {
 								height: auto;
-								margin-bottom: 30px;
+								margin-bottom: 25px;
 
 								.sub-section {
 									width: 230px;
@@ -109,8 +108,8 @@
 										border-radius: 10px;
 
 										p {
-											font-size: 14px;
-											color: #ffffff;
+											font-size: 16px;
+											color: #fff;
 										}
 									}
 
@@ -126,7 +125,7 @@
 										}
 
 										p {
-											font-size: 14px;
+											font-size: 16px;
 										}
 									}
 								}
@@ -140,12 +139,12 @@
 									width: 20px;
 									height: 20px;
 									margin-left: 12px;
-									color: #fff;
+									color: #181a20;
 								}
 
 								.sub-title {
 									margin-left: 12px;
-									color: #fff;
+									color: #181a20;
 									font-family: $font;
 									font-size: 14px;
 									font-style: normal;
@@ -176,7 +175,7 @@
 								height: 413px;
 								margin-bottom: 7px;
 								border-radius: 12px;
-								background: #fff;
+								background: #181a20;
 								box-shadow: 0px 1px 4px 0px rgba(24, 26, 32, 0.07);
 
 								.top {
@@ -203,7 +202,7 @@
 										border-radius: 6px;
 										padding: 6px 20px;
 										background: #091eda;
-										color: #fff;
+										color: #181a20;
 										text-align: center;
 										text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 										font-family: $font;
@@ -225,10 +224,10 @@
 										align-items: center;
 										border-radius: 6px;
 										border: 1px solid rgba(255, 255, 255, 0.5);
-										background: #fff;
+										background: #181a20;
 
 										p {
-											color: #fff;
+											color: #181a20;
 											font-family: $font;
 											font-size: 15px;
 											font-style: normal;
@@ -255,7 +254,7 @@
 											overflow: hidden;
 
 											p {
-												color: #fff;
+												color: #181a20;
 												font-family: $font;
 												font-size: 15px;
 												font-style: normal;
@@ -293,7 +292,7 @@
 											align-items: center;
 
 											p {
-												color: #fff;
+												color: #181a20;
 												font-family: $font;
 												font-size: 13px;
 												font-style: normal;
@@ -306,7 +305,7 @@
 									.divider {
 										width: 100%;
 										height: 1px;
-										background: #ddd;
+										background: #181a20;
 										margin-bottom: 17px;
 									}
 
@@ -322,7 +321,7 @@
 											gap: 7px;
 
 											p {
-												color: #fff;
+												color: #181a20;
 												font-family: $font;
 												font-style: normal;
 												line-height: normal;
@@ -352,6 +351,7 @@
 						.pagination-config {
 							width: 442px;
 							height: 86px;
+							margin-top: 50px;
 							align-items: center;
 							gap: 20px;
 
@@ -361,8 +361,10 @@
 							}
 
 							.total-result {
+								margin-top: 20px;
+
 								p {
-									color: #fff;
+									color: #181a20;
 									text-align: center;
 									font-family: $font;
 									font-size: 24px;

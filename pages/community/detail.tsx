@@ -335,9 +335,6 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 							<Stack className="title-box">
 								<Stack className="left">
 									<Typography className="title">{articleCategory} {t('BOARD')}</Typography>
-									<Typography className="sub-title">
-										{t('Express your opinions freely here without content restrictions')}
-									</Typography>
 								</Stack>
 								<Button
 									onClick={() =>
@@ -387,24 +384,24 @@ const CommunityDetail: NextPage = ({ initialInput, ...props }: T) => {
 												{boardArticle?.meLiked && boardArticle?.meLiked[0]?.myFavorite ? (
 													<ThumbUpAltIcon style={{ color: 'blue' }} onClick={() => likeBoardArticleHandler(user, boardArticle?._id, boardArticle?.creatorData?._id)} />
 												) : (
-													<ThumbUpOffAltIcon style={{ color: 'white' }} onClick={() => likeBoardArticleHandler(user, boardArticle?._id, boardArticle?.creatorData?._id)} />
+													<ThumbUpOffAltIcon style={{ color: 'black' }} onClick={() => likeBoardArticleHandler(user, boardArticle?._id, boardArticle?.creatorData?._id)} />
 												)}
 
 												<Typography className="text">{boardArticle?.articleLikes}</Typography>
 											</Stack>
 											<Stack className="divider"></Stack>
 											<Stack className="icon-info">
-												<VisibilityIcon style={{ color: 'white' }} />
+												<VisibilityIcon style={{ color: 'black' }} />
 												<Typography className="text">{boardArticle?.articleViews}</Typography>
 											</Stack>
 											<Stack className="divider"></Stack>
 											<Stack className="icon-info">
-												{total > 0 ? <ChatIcon style={{ color: 'white' }} /> : <ChatBubbleOutlineRoundedIcon style={{ color: 'white' }} />}
+												{total > 0 ? <ChatIcon style={{ color: 'black' }} /> : <ChatBubbleOutlineRoundedIcon style={{ color: 'black' }} />}
 												<Typography className="text">{total}</Typography>
 											</Stack>
 										</Stack>
 									</Stack>
-									<Stack style={{ background: '#001e1c' }}>
+									<Stack className={'content-box'}>
 										<ToastViewerComponent markdown={boardArticle?.articleContent} className={'ytb_play'} />
 									</Stack>
 									<Stack className="like-and-dislike">

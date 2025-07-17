@@ -15,18 +15,19 @@ const About: NextPage = () => {
 				<Stack className={'intro'}>
 					<Stack className={'container'}>
 						<Stack className={'left'}>
-							<strong>We're on a Mission to Change View of Real Estate Field.</strong>
+							<strong>We're on a Mission to Change View of Car Sale On.</strong>
 						</Stack>
 						<Stack className={'right'}>
 							<p>
-								It doesn’t matter how organized you are — a surplus of toys will always ensure your house is a mess
-								waiting to happen. Fortunately, getting kids on board with the idea of ditching their stuff is a lot
-								easier than it sounds.
+								It doesn’t matter how meticulously you clean your car—an overload of items inside will always turn it into clutter on wheels.
+								Thankfully, convincing yourself to clear out unnecessary stuff from your vehicle is simpler than you might think.
+
 								<br />
 								<br />
-								Maecenas quis viverra metus, et efficitur ligula. Nam congue augue et ex congue, sed luctus lectus
-								congue. Integer convallis condimentum sem. Duis elementum tortor eget condimentum tempor. Praesent
-								sollicitudin lectus ut pharetra pulvinar.
+								Experience driving perfection in a car crafted for your lifestyle.
+								Engineered with precision, styled for performance, and tailored for comfort, every journey becomes unforgettable.
+								Embrace superior handling, seamless control, and innovative features designed to elevate your drive.
+
 							</p>
 							<Stack className={'boxes'}>
 								<div className={'box'}>
@@ -80,7 +81,7 @@ const About: NextPage = () => {
 					</Stack>
 				</Stack>
 				<Stack className={'options'}>
-					<img src="/img/logo/bannercar13.webp" alt="" className={'about-banner'} />
+					<img src="/img/banner/genesis.jpg" alt="" className={'about-banner'} />
 					<Stack className={'container'}>
 						<strong>Let’s find the right selling option for you</strong>
 						<Stack>

@@ -26,29 +26,30 @@
 			}
 
 			.properties-list-box {
-				margin-top: 85px;
+				padding: 30px;
+				border: 1px solid #b9b9b9;
+				border-radius: 2rem;
+				box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 				.list-box {
 					.listing-title-box {
 						width: 100%;
 						height: auto;
 						flex-direction: row;
-						gap: 110px;
-						padding: 18px 15px 18px 33px;
-						border-radius: 12px;
-						background: #336659;
+						gap: 130px;
+						padding: 18px 15px 18px 0px;
 
 						.title-text {
 							color: #181a20;
 							font-family: $font;
-							font-size: 15px;
+							font-size: 16px;
 							font-style: normal;
 							font-weight: 600;
 							line-height: normal;
 						}
 
 						:first-child {
-							margin-right: 138px;
+							margin-right: 165px;
 						}
 					}
 
@@ -85,7 +86,7 @@
 
 							.name {
 								margin-bottom: 8px;
-								color: #fff;
+								color: #181a20;
 								font-family: $font;
 								font-size: 13px;
 								font-style: normal;
@@ -95,7 +96,7 @@
 
 							.address {
 								margin-bottom: 13px;
-								color: #fff;
+								color: #181a20;
 								font-family: $font;
 								font-size: 11px;
 								font-style: normal;
@@ -107,7 +108,7 @@
 							}
 
 							.price {
-								color: #fff;
+								color: #181a20;
 								font-family: $font;
 								font-size: 15px;
 								font-style: normal;
@@ -121,10 +122,10 @@
 							height: 100%;
 							align-items: center;
 							justify-content: center;
-							margin-right: 77px;
+							margin-right: 100px;
 
 							.date {
-								color: #fff;
+								color: #181a20;
 								font-family: $font;
 								font-size: 12px;
 								font-style: normal;
@@ -138,14 +139,14 @@
 							height: 100%;
 							align-items: center;
 							justify-content: center;
-							margin-right: 70px;
+							margin-right: 60px;
 
 							.coloured-box {
 								width: 93px;
 								height: 36px;
 								align-items: center;
 								justify-content: center;
-								border-radius: 60px;
+								border-radius: 55px;
 
 								.status {
 									font-family: $font;
@@ -158,14 +159,14 @@
 						}
 
 						.views-box {
-							width: 35px;
+							width: 20px;
 							height: 100%;
 							align-items: center;
 							justify-content: center;
-							margin-right: 75px;
 
 							.views {
-								color: #fff;
+								margin-right: -100px;
+								color: #181a20;
 								font-family: $font;
 								font-size: 12px;
 								font-style: normal;
@@ -183,11 +184,13 @@
 						margin-top: 30px;
 
 						.total-result {
+							margin-top: 20px;
+
 							p {
-								color: #fff;
+								color: #181a20;
 								text-align: center;
 								font-family: $font;
-								font-size: 14px;
+								font-size: 16px;
 								font-style: normal;
 								font-weight: 400;
 								line-height: 26px;

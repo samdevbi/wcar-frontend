@@ -70,7 +70,6 @@ const MySaved: NextPage = () => {
 				<Stack className="main-title-box">
 					<Stack className="right-box">
 						<Typography className="main-title">{t('My')} {t('Saved')}</Typography>
-						<Typography className="sub-title">{t('We are glad to see you again!')}</Typography>
 					</Stack>
 				</Stack>
 				<Stack className="favorites-list-box">

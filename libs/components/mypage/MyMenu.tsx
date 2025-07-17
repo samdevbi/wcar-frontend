@@ -178,22 +178,6 @@ const MyMenu = () => {
 									</div>
 								</Link>
 							</ListItem>
-							<ListItem className={pathname === 'followings' ? 'focus' : ''}>
-								<Link
-									href={{
-										pathname: '/mypage',
-										query: { category: 'followings' },
-									}}
-									scroll={false}
-								>
-									<div className={'flex-box'}>
-										<GroupAddOutlinedIcon className={'icon'} />
-										<Typography className={'sub-title'} variant={'subtitle1'} component={'p'}>
-											{t('Followings')}
-										</Typography>
-									</div>
-								</Link>
-							</ListItem>
 							{['USER', 'AGENT'].includes(user?.type) && (
 								<ListItem className={pathname === 'recentlyVisited' ? 'focus' : ''}>
 									<Link

@@ -174,7 +174,6 @@ const AddProduct = ({ initialValues, ...props }: any) => {
 			<div id="add-property-page">
 				<Stack className="main-title-box">
 					<Typography className="main-title">{t('Add')} {t('New')} {t('Products')}</Typography>
-					<Typography className="sub-title">{t('We are glad to see you again!')}</Typography>
 				</Stack>
 
 				<div>

@@ -129,7 +129,7 @@ const MemberArticles: NextPage = ({ initialInput, ...props }: any) => {
 MemberArticles.defaultProps = {
 	initialInput: {
 		page: 1,
-		limit: 6,
+		limit: 2,
 		sort: 'createdAt',
 		direction: 'DESC',
 		search: {},

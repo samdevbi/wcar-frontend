@@ -376,104 +376,63 @@
 
 .agent-general-card {
 	position: relative;
-	width: 300px;
-	height: 410px;
-	margin-bottom: 34px;
+	width: 280px;
+	height: 600px;
+	margin-bottom: 50px;
 	margin-left: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: 1px solid rgba(0, 0, 0, 0.445);
-	border-radius: 1rem;
+	border: 1px solid rgba(108, 106, 106, 0.445);
+	border-radius: 2rem;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 	transition: transform 0.3s;
 
 	&:hover {
 		opacity: 1;
 		transform: scale(1.07);
 
-		.agent-desc {
-			border: 1px solid #405FF2;
-			border-radius: 1rem;
-			background: #405FF2;
-
-			.agent-info {
-				span {
-					color: #fff;
-				}
-
-				strong {
-					color: #fff;
-
-				}
-			}
-
-			.icon {
-				color: #fff;
-			}
-
-			.buttons {
-				p {
-					color: #fff;
-				}
-
-				.view-cnt {
-					color: #fff;
-				}
-			}
-		}
 	}
 
 	.agent-img {
-		border-radius: 12px;
-		margin-top: 10px;
-		width: 280px;
-		height: 280px;
+		border-radius: 2rem 2rem 0 0;
+		width: 278px;
+		height: 400px;
 		background-size: 100% 100%;
 		cursor: pointer;
-
-		div {
-			position: absolute;
-			padding: 12px;
-			top: 20px;
-			left: 20px;
-			border-radius: 6px;
-			background: #405FF2;
-			color: #fff;
-			font-family: $font;
-			font-size: 12px;
-			font-style: normal;
-			font-weight: 600;
-			line-height: normal;
-		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.agent-desc {
-		width: 260px;
-		height: 70px;
-		margin-top: 23px;
-		margin-bottom: 10px;
+		width: 278px;
+		height: 198px;
+		padding: 30px;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-around;
-		align-items: center;
-		border: 1px solid #405FF2;
-		border-radius: 1rem;
+		align-items: flex-start;
+		border-radius: 0 0 2rem 2rem;
+		background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+
 
 		.agent-info {
 			display: flex;
 			flex-direction: column;
 
 			strong {
-				width: 100px;
+				width: 100%;
+				height: 50px;
 				color: #181a20;
 				font-family: $font;
-				font-size: 12px;
+				font-size: 18px;
 				font-style: normal;
 				font-weight: 600;
 				line-height: normal;
 				cursor: pointer;
 				overflow: hidden;
-				white-space: nowrap;
+				white-space: wrap;
 				text-overflow: ellipsis;
 			}
 
@@ -497,6 +456,7 @@
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
+			margin-left: -10px;
 
 			svg {
 				width: 24px;
@@ -881,10 +841,18 @@
 }
 
 .community-general-card-config {
+	width: 322px;
+	margin-bottom: 50px;
 	position: relative;
-	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 420px;
 	gap: 20px;
-	border-radius: 12px;
+	border: 1px solid #b9b9b9;
+	border-radius: 2rem;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 	cursor: pointer;
 
 	.image-box {
@@ -895,7 +863,7 @@
 			width: 100%;
 			height: 280px;
 			max-height: 100%;
-			border-radius: 12px;
+			border-radius: 2rem 2rem 0 0;
 			object-fit: cover;
 		}
 	}
@@ -906,25 +874,37 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		height: 80px;
+		height: 200px;
+		padding: 20px;
+		padding-bottom: 20px;
 
 		.title {
-			color: #fff;
+			height: 40px;
+			color: #181a20;
 			font-family: $font;
-			font-size: 13px;
+			font-size: 14px;
 			font-style: normal;
 			font-weight: 400;
 			line-height: normal;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		.desc {
-			color: #fff;
+			width: 180px;
+			height: 30px;
+			color: #181a20;
 			font-family: $font;
-			font-size: 15px;
+			font-size: 16px;
 			font-style: normal;
 			font-weight: 600;
 			line-height: 26px;
-			text-transform: capitalize;
+			text-wrap: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		.buttons {
@@ -935,7 +915,7 @@
 			align-items: center;
 
 			.icon {
-				color: white;
+				color: black;
 			}
 
 			svg {
@@ -946,7 +926,7 @@
 
 			.view-cnt {
 				font-size: 13px;
-				color: white;
+				color: black;
 			}
 		}
 	}
