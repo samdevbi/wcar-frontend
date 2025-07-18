@@ -19,8 +19,8 @@ const Footer = () => {
 				<Stack className={'main'}>
 					<Stack className={'left'}>
 						<Box component={'div'} className={'main-box'}>
-							<img src="/img/logo/world.svg" alt="" className={'logo'} />
-							<p className={'wcar'}>WCar</p>
+							<img src="/img/logo/deal1.svg" alt="" className={'logo'} />
+							<p className={'wcar'}>Car Sale On</p>
 						</Box>
 						<Box component={'div'} className={'footer-box'}>
 							<span>total free customer care</span>
@@ -75,7 +75,7 @@ const Footer = () => {
 					</Stack>
 				</Stack>
 				<Stack className={'second'}>
-					<span>© WCar - All rights reserved. WCar {moment().year()}</span>
+					<span>© Car Sale On - All rights reserved. CarSaleon {moment().year()}</span>
 					<span>Privacy · Terms · Sitemap</span>
 				</Stack>
 			</Stack>

@@ -73,8 +73,7 @@ const Join: NextPage = () => {
 						<Stack className={'left'}>
 							{/* @ts-ignore */}
 							<Box className={'logo'}>
-								<img src="/img/logo/world.svg" alt="" />
-								<span>WCar</span>
+								<span>Car Saleon</span>
 							</Box>
 							<Box className={'info'}>
 								<span>{loginView ? 'login' : 'signup'}</span>
@@ -165,19 +164,8 @@ const Join: NextPage = () => {
 													}
 													label="Dealer"
 												/>
-											</FormGroup><FormGroup>
-												<FormControlLabel
-													control={
-														<Checkbox
-															size="small"
-															name={'SERVICE'}
-															onChange={checkUserTypeHandler}
-															checked={input?.type == 'SERVICE'}
-														/>
-													}
-													label="Service"
-												/>
-											</FormGroup><FormGroup>
+											</FormGroup>
+											<FormGroup>
 												<FormControlLabel
 													control={
 														<Checkbox

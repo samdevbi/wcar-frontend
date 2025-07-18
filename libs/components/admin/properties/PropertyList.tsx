@@ -62,7 +62,7 @@ const headCells: readonly HeadCell[] = [
 		id: 'agent',
 		numeric: false,
 		disablePadding: false,
-		label: 'AGENT',
+		label: 'Made In',
 	},
 	{
 		id: 'location',
@@ -174,8 +174,8 @@ export const PropertyPanelList = (props: PropertyPanelListType) => {
 												</Stack>
 											)}
 										</TableCell>
-										<TableCell align="center">{car.carPrice}</TableCell>
-										<TableCell align="center">{car.creatorData?.titleNick}</TableCell>
+										<TableCell align="center">${car.carPrice.toLocaleString('de-DE')}</TableCell>
+										<TableCell align="center">{car.carMadeIn}</TableCell>
 										<TableCell align="center">{car.carLocation}</TableCell>
 										<TableCell align="center">{car.carType}</TableCell>
 										<TableCell align="center">

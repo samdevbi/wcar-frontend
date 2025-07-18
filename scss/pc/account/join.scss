@@ -1,8 +1,9 @@
 #pc-wrap {
   .join-page {
     position: relative;
-    padding: 90px 0px;
     width: 100%;
+    padding: 100px;
+    margin-bottom: 100px;
     height: auto;
 
     .container {
@@ -27,22 +28,16 @@
 
           .logo {
             display: flex;
-            flex-direction: row;
+            justify-content: center;
             align-items: center;
 
-            img {
-              width: 80px;
-              height: 80px;
-            }
-
             span {
-              margin-left: 10px;
               font-family: $font ;
-              font-size: 60px;
+              font-size: 80px;
               font-style: normal;
               font-weight: 700;
               line-height: normal;
-              letter-spacing: 2px;
+              letter-spacing: 4px;
               color: #181A20;
             }
           }

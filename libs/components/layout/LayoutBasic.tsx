@@ -31,68 +31,49 @@ const withLayoutBasic = (Component: any) => {
 			switch (router.pathname) {
 				case '/cars':
 					title = 'Car Search';
-					desc = 'We are glad to see you again!';
 					break;
 				case '/cars/detail':
 					title = 'Car Search';
-					desc = 'We are glad to see you again!';
 					break;
 				case '/shop':
 					title = 'Product Search';
-					desc = 'We are glad to see you again!';
 					break;
 				case '/shop/detail':
 					title = 'Product Search';
-					desc = 'We are glad to see you again!';
 					break;
 				case '/agent':
 					title = 'Agents';
-					desc = 'Car / For Rent';
 					break;
 				case '/agent/detail':
 					title = 'Agent Page';
-					desc = 'Car / For Rent';
 					break;
 				case '/dealers':
 					title = 'Dealers';
-					desc = 'Car / For Rent';
 					break;
 				case '/dealers/detail':
 					title = 'Dealer Page';
-					desc = 'Car / For Rent';
 					break;
 				case '/service':
 					title = 'Services';
-					desc = 'Service / For Rent';
-					break;
-				case '/service/detail':
-					title = 'Service Page';
-					desc = 'Service / For Rent';
 					break;
 				case '/mypage':
 					title = 'my page';
-					desc = 'Home / For Rent';
 					break;
 				case '/community':
 					title = 'Community';
-					desc = 'Home / For Rent';
 					break;
 				case '/community/detail':
 					title = 'Community Detail';
-					desc = 'Home / For Rent';
 					break;
 				case '/cs':
 					title = 'CS';
-					desc = 'We are glad to see you again!';
 					break;
 				case '/account/join':
-					title = 'Login/Signup';
-					desc = 'Authentication Process';
+					title = 'Join';
 					setAuthHeader(true);
 					break;
 				case '/member':
 					title = 'Member Page';
-					desc = 'Home / For Rent';
 					break;
 				default:
 					break;

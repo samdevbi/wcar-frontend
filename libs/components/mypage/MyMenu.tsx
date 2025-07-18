@@ -178,7 +178,7 @@ const MyMenu = () => {
 									</div>
 								</Link>
 							</ListItem>
-							{['USER', 'AGENT'].includes(user?.type) && (
+							{['USER', 'AGENT', 'ADMIN'].includes(user?.type) && (
 								<ListItem className={pathname === 'recentlyVisited' ? 'focus' : ''}>
 									<Link
 										href={{
@@ -196,7 +196,7 @@ const MyMenu = () => {
 									</Link>
 								</ListItem>
 							)}
-							{['DEALER', 'AGENT'].includes(user?.type) && (
+							{['DEALER', 'AGENT', 'ADMIN'].includes(user?.type) && (
 								<>
 									<ListItem className={pathname === 'followings' ? 'focus' : ''}>
 										<Link
