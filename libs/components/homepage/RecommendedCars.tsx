@@ -97,7 +97,7 @@ const RecommendedCars = (props: RecommendedCarsProps) => {
 					<Stack className={'card-box'}>
 						{recomCars?.length === 0 ? (
 							<Box component={'div'} className={'empty-list'}>
-								Recommmended Cars Empty
+								{t('Recommmended Cars Empty')}
 							</Box>
 						) : (
 							<Swiper

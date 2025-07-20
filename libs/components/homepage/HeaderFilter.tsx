@@ -170,7 +170,7 @@ const HeaderFilter = () => {
 						</div>
 					</Stack>
 					<Stack className={'search-box-other'}>
-						<Typography>Search...</Typography>
+						<Typography>{t('Search...')}</Typography>
 						<div className={'search-btn'} onClick={pushSearchHandler}>
 							<img src="/img/icons/search_white.svg" alt="" />
 						</div>

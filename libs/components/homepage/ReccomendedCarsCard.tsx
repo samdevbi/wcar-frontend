@@ -16,6 +16,7 @@ import AirlineSeatReclineExtraIcon from '@mui/icons-material/AirlineSeatReclineE
 import LanguageIcon from '@mui/icons-material/Language';
 import SpeedIcon from '@mui/icons-material/Speed';
 import PinDropIcon from '@mui/icons-material/PinDrop';
+import { useTranslation } from 'next-i18next';
 
 interface RecommendedCarCardProps {
 	car: any;
@@ -29,6 +30,7 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 	const device = useDeviceDetect();
 	const router = useRouter();
 	const user = useReactiveVar(userVar);
+	const { t, i18n } = useTranslation('common');
 
 	/** HANDLERS **/
 	const pushDetailhandler = async (propertyId: string) => {
@@ -49,7 +51,7 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 				>
 					{car && car?.carRank > topCarRank && (
 						<Stack component={'div'} className={'top-badge'}>
-							<Typography>TOP</Typography>
+							<Typography>{t('TOP')}</Typography>
 						</Stack>
 					)}
 				</div>
@@ -83,7 +85,7 @@ const RecommendedCarCard = (props: RecommendedCarCardProps) => {
 						</div>
 						<div>
 							<SpeedIcon className={'img'} />
-							<span>{car?.carMileage} miles</span>
+							<span>{car?.carMileage} {t('km')}</span>
 						</div>
 						<div>
 							<PinDropIcon className={'img'} />

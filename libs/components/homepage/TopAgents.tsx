@@ -51,7 +51,7 @@ const TopAgents = (props: TopAgentsProps) => {
 							<Link className={'more-box'}
 								href={'/agent'}>
 								<span>{t('Meet Our Team')}</span>
-								<p>We go the extra mile to make sure you get the best, every time you trust us with your car needs</p>
+								<p>{t('We go the extra mile to make sure you get the best, every time you trust us with your car needs')}</p>
 							</Link>
 						</Box>
 					</Stack>

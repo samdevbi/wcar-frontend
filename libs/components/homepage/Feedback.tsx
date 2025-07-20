@@ -96,7 +96,7 @@ const Feedback = () => {
             <Stack className={'top-cars'}>
                 <Stack className={'container'}>
                     <Stack className={'info-box'}>
-                        <span style={{ marginTop: '20px' }}>{t(' Our Customers')}</span>
+                        <span style={{ marginTop: '20px' }}>{t('Our Customers')}</span>
                         <p style={{ marginTop: '20px' }}>"{t('We value our customers and their opinions matter to us. Your feedback helps us grow and improve every day!')}"</p>
                     </Stack>
                     <Stack className={'card-box'}>

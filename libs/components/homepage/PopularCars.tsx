@@ -96,10 +96,10 @@ const PopularCars = (props: PopularProductsProps) => {
 									</Stack>
 									<Stack className="address">
 										<Typography>
-											Category: <strong>{main?.productType}</strong>
+											{t('Category')}: <strong>{main?.productType}</strong>
 										</Typography>
 										<Typography>
-											Price: <strong>${main?.productPrice}</strong>
+											{t('Price')}: <strong>${main?.productPrice}</strong>
 										</Typography>
 									</Stack>
 								</Stack>

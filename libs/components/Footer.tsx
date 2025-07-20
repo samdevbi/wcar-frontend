@@ -23,11 +23,11 @@ const Footer = () => {
 							<p className={'wcar'}>Car Sale On</p>
 						</Box>
 						<Box component={'div'} className={'footer-box'}>
-							<span>total free customer care</span>
+							<span>{t('total free customer care')}</span>
 							<p>+82 10 4867 5455</p>
 						</Box>
 						<Box component={'div'} className={'footer-box'}>
-							<span>nee live</span>
+							<span>{t('need live')}</span>
 							<p>+82 10 4867 5455</p>
 							<span>Support?</span>
 						</Box>
@@ -43,40 +43,40 @@ const Footer = () => {
 					</Stack>
 					<Stack className={'right'}>
 						<Box component={'div'} className={'top'}>
-							<strong>keep yourself up to date</strong>
+							<strong>{t('keep yourself up to date')}</strong>
 							<div>
 								<input type="text" placeholder={'Your Email'} />
-								<span>Subscribe</span>
+								<span>{t('Join Us')}</span>
 							</div>
 						</Box>
 						<Box component={'div'} className={'bottom'}>
 							<div>
-								<strong>Popular Search</strong>
-								<span>Car for Rent</span>
-								<span>Car Low to hide</span>
+								<strong>{t('Popular Search')}</strong>
+								<span>{t('Car for Rent')}</span>
+								<span>{t('Car Low to hide')}</span>
 							</div>
 							<div>
-								<strong>Quick Links</strong>
-								<span>Terms of Use</span>
-								<span>Privacy Policy</span>
-								<span>Pricing Plans</span>
-								<span>Our Services</span>
-								<span>Contact Support</span>
-								<span>FAQs</span>
+								<strong>{t('Quick Links')}</strong>
+								<span>{t('Terms of Use')}</span>
+								<span>{t('Privacy Policy')}</span>
+								<span>{t('Pricing Plans')}</span>
+								<span>{t('Our Services')}</span>
+								<span>{t('Contact Support')}</span>
+								<span>{t('FAQs')}</span>
 							</div>
 							<div>
-								<strong>Discover</strong>
-								<span>Seoul</span>
-								<span>Gyeongido</span>
-								<span>Busan</span>
-								<span>Jejudo</span>
+								<strong>{t('Discover')}</strong>
+								<span>{t('Seoul')}</span>
+								<span>{t('Gyeongido')}</span>
+								<span>{t('Busan')}</span>
+								<span>{t('Jejudo')}</span>
 							</div>
 						</Box>
 					</Stack>
 				</Stack>
 				<Stack className={'second'}>
-					<span>© Car Sale On - All rights reserved. CarSaleon {moment().year()}</span>
-					<span>Privacy · Terms · Sitemap</span>
+					<span>© Car Sale On{t(' - All rights reserved.')} CarSaleon {moment().year()}</span>
+					<span>{t('Privacy · Terms · Sitemap')}</span>
 				</Stack>
 			</Stack>
 		);
