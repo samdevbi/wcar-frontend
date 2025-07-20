@@ -1,16 +1,16 @@
 services: 
-  wcar-client: 
-    container_name: wcar-client
+  carselon-client: 
+    container_name: carselon-client
     restart: always
     image: node:20.18.1
     ports: 
-      - 3022:3000
+      - 1000:1000
     environment: 
-      - PORT=3000
+      - PORT=1000
 
     volumes: 
-      - ./:/user/src/wcar-client
-    working_dir: /user/src/wcar-client
+      - ./:/user/src/carselon-client
+    working_dir: /user/src/carselon-client
 
     networks: 
       - client-network
