@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Avatar, Box, Stack } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import Badge from '@mui/material/Badge';
 import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
 import MarkChatUnreadIcon from '@mui/icons-material/MarkChatUnread';
 import { useRouter } from 'next/router';
@@ -12,30 +11,6 @@ import { socketVar, userVar } from '../../apollo/store';
 import { Member } from '../types/member/member';
 import { Messages, REACT_APP_API_URL } from '../config';
 import { sweetErrorAlert } from '../sweetAlert';
-
-const NewMessage = (type: any) => {
-	if (type === 'right') {
-		return (
-			<Box
-				component={'div'}
-				flexDirection={'row'}
-				style={{ display: 'flex' }}
-				alignItems={'flex-end'}
-				justifyContent={'flex-end'}
-				sx={{ m: '10px 0px' }}
-			>
-				<div className={'msg_right'}></div>
-			</Box>
-		);
-	} else {
-		return (
-			<Box flexDirection={'row'} style={{ display: 'flex' }} sx={{ m: '10px 0px' }} component={'div'}>
-				<Avatar alt={'jonik'} src={'/img/profile/defaultUser.svg'} />
-				<div className={'msg_left'}></div>
-			</Box>
-		);
-	}
-};
 
 interface MessagePayload {
 	event: string;
@@ -54,7 +29,6 @@ const Chat = () => {
 	const chatContentRef = useRef<HTMLDivElement>(null);
 	const [messagesList, setMessagesList] = useState<MessagePayload[]>([]);
 	const [onlineUsers, setOnlineUsers] = useState<number>(0);
-	const textInput = useRef(null);
 	const [messageInput, setMessageInput] = useState<string>('');
 	const [open, setOpen] = useState(false);
 	const [openButton, setOpenButton] = useState(false);
@@ -62,31 +36,29 @@ const Chat = () => {
 	const user = useReactiveVar(userVar);
 	const socket = useReactiveVar(socketVar);
 
-
 	/** LIFECYCLES **/
-
 	useEffect(() => {
 		socket.onmessage = (msg) => {
 			const data = JSON.parse(msg.data);
-			console.log('WebSocket message:', data);
+			console.log('WebSocket message', data);
 
 			switch (data.event) {
 				case 'info':
 					const newInfo: InfoPayload = data;
 					setOnlineUsers(newInfo.totalClients);
-					break
+					break;
 				case 'getMessages':
 					const list: MessagePayload[] = data.list;
 					setMessagesList(list);
-					break
+					break;
 				case 'message':
 					const newMessage: MessagePayload = data;
 					messagesList.push(newMessage);
 					setMessagesList([...messagesList]);
-					break
+					break;
 			}
-		}
-	}, [socket, messagesList]);
+		};
+	}, [socket, messageInput]);
 
 	useEffect(() => {
 		const timeoutId = setTimeout(() => {
@@ -130,6 +102,7 @@ const Chat = () => {
 		}
 	};
 
+
 	return (
 		<Stack className="chatting">
 			{openButton ? (
@@ -139,21 +112,19 @@ const Chat = () => {
 			) : null}
 			<Stack className={`chat-frame ${open ? 'open' : ''}`}>
 				<Box className={'chat-top'} component={'div'}>
-					<div style={{ fontFamily: 'Nunito' }}>Online Chat</div>
-					<RippleBadge style={{ margin: '-18px 0 0 21px' }} badgeContent={onlineUsers} />
+					<div style={{ fontFamily: 'Nunito' }}>Carselon Chat</div>
+					<RippleBadge style={{ margin: '-8px 0 0 15px' }} badgeContent={onlineUsers} />
 				</Box>
 				<Box className={'chat-content'} id="chat-content" ref={chatContentRef} component={'div'}>
 					<ScrollableFeed>
 						<Stack className={'chat-main'}>
 							<Box flexDirection={'row'} style={{ display: 'flex' }} sx={{ m: '10px 0px' }} component={'div'}>
-								<div className={'welcome'}>Welcome to Live chat!</div>
 							</Box>
 							{messagesList.map((ele: MessagePayload) => {
 								const { text, memberData } = ele;
 								const memberImage = memberData?.image
-									? `${REACT_APP_API_URL}/${memberData.image}`
+									? `${REACT_APP_API_URL}/${user?.image}`
 									: '/img/profile/defaultUser.svg';
-
 								return memberData?._id === user?._id ? (
 									<Box
 										component={'div'}
@@ -170,7 +141,7 @@ const Chat = () => {
 										<Avatar alt={'jonik'} src={memberImage} />
 										<div className={'msg-left'}>{text}</div>
 									</Box>
-								);
+								)
 							})}
 						</Stack>
 					</ScrollableFeed>
